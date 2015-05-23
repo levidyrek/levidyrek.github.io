@@ -1,0 +1,56 @@
+body {
+    background-color: #202020 !important;
+}
+
+.jumbotron {
+    background-image: url("file:///home/levidyrek/Desktop/Projects/personal_website/images/home_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jumbotron h1 {
+    color: white !important;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 100px !important;
+    padding-top: 50px;
+    padding-bottom: 300px;
+}
+
+.nav li {
+    display: inline;
+    text-transform: uppercase;
+}
+
+.nav a {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding-right: 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav {
+    background-color: #202020;
+    border-style: solid;
+    border-color: cyan;
+    padding-top: 10px;
+}
+
+.container {
+    background-color: WhiteSmoke;
+}
+
+.nav a:hover {
+    text-decoration: none;
+    color: cyan;
+}
+
+.nav-margin {
+    padding-bottom: 15px;
+}
+
+.top-margin {
+    padding-bottom: 10px;
+}

@@ -1,0 +1,9 @@
+.nav li {
+    display: inline;
+    text-decoration: none;
+    left-padding: 15px;
+}
+
+.jumbotron {
+    background-image: "images/web-background";
+}
