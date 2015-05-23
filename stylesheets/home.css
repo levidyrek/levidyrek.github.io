@@ -1,0 +1,47 @@
+.jumbotron {
+    background-image: url("../images/home_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jumbotron h1 {
+    color: white !important;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 100px !important;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    text-transform: capitalize !important;
+}
+
+.container {
+    padding-bottom: 0px !important;
+}
+
+.info {
+    color: white;
+    padding-bottom: 225px;
+}
+
+.info h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.info li {
+    font-size: 17px !important;
+    text-indent: 10px;
+}
+
+.info ul {
+    list-style-type: none;
+}
+
+.info ul li:before {
+    content: '\2713';
+    display: inline-block;
+    color: cyan;
+    padding: 0 6px 0 0;
+}
+

@@ -1,0 +1,46 @@
+body {
+    background-color: #202020 !important;
+}
+
+.nav {
+    border-style: solid;
+    border-color: cyan;
+    background-color: #303030;
+    padding-top: 10px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+}
+
+.nav a:hover {
+    text-decoration: none;
+    color: cyan;
+}
+
+.nav-margin {
+    padding: 15px;
+}
+
+.top-margin {
+    padding: 10px;
+} 
+
+.container {
+    font-family: 'Quicksand', sans-serif;
+    color: #202020;
+    padding-bottom: 40px;
+    background-color: WhiteSmoke;
+}
+
+.container h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
