@@ -44,3 +44,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+#current-page {
+    color: cyan !important;
+}
