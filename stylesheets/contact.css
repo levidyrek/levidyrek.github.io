@@ -1,4 +1,16 @@
-h1 {
-    text-transform: none !important;
-    text-align: center;
-} 
+.contact-main {
+    background-color: #303030;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+}
+
+.contact-main a {
+    color: cyan;
+}
+
+.contact-main a:hover {
+    color: LightCyan;
+    text-decoration: none;
+}

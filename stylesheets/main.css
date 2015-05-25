@@ -48,3 +48,18 @@ body {
 #current-page {
     color: cyan !important;
 }
+
+/* Footer */
+.contact {
+    color: LightGray;
+    text-align: center;
+}
+
+.contact a {
+    color: LightCyan;
+}
+
+.contact a:hover {
+    color: cyan;
+    text-decoration: none;
+}
