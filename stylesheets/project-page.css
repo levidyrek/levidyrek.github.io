@@ -30,6 +30,10 @@ h2 {
     padding-top: 5px;
 }
 
+.description p {
+    font-size: 15px !important;
+}
+
 #project-pic {
     padding-left: 10px;
     padding-bottom: 20px;
@@ -42,4 +46,16 @@ h2 {
 .brief a:hover {
     color: cyan !important;
     text-decoration: none;
+}
+
+.description h3 {
+    padding-top: 10px;
+}
+
+.description h4 {
+    padding-top: 10px;
+}
+
+#features {
+    padding-top: 0px !important;
 }
