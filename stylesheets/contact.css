@@ -7,10 +7,10 @@
 }
 
 .contact-main a {
-    color: cyan;
+    color: #00CCCC;
 }
 
 .contact-main a:hover {
-    color: LightCyan;
+    color: cyan;
     text-decoration: none;
 }

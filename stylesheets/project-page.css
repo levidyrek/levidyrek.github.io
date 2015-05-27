@@ -1,0 +1,45 @@
+h2 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.brief {
+    line-height: 25px !important;
+    background-color: LightCyan;
+    padding: 10px;
+}
+
+.brief p {
+    font-size: 2000px !important;
+}
+
+.brief h4 {
+    display: inline;
+    padding-right: 7px;
+}
+
+.description {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    background-color: LightGray;
+}
+
+.description h3 {
+    text-transform: capitalize !important;
+    padding-top: 5px;
+}
+
+#project-pic {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.brief a {
+    color: #00CCCC !important;
+}
+
+.brief a:hover {
+    color: cyan !important;
+    text-decoration: none;
+}

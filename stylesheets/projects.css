@@ -12,6 +12,6 @@ h1 {
 }
 
 .projects a:hover {
-    color: cyan;
+    color: #00CCCC;
     text-decoration: none;
 }
