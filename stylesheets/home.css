@@ -1,46 +1,107 @@
-.jumbotron {
-    background-image: url("../images/home_background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.slide1 {
+    background-image: url("../images/mountainbackground.jpg");
 }
 
-.jumbotron h1 {
+.slide2 {
+	background-image: url("../images/townsight.jpg");
+}
+
+.slide3 {
+	background-image: url("../images/oceangreece.jpg");
+}
+
+.slide1, .slide2, .slide3 {
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+h1 {
     color: white !important;
     text-align: center;
-    font-family: 'Satisfy', cursive;
-    font-size: 100px !important;
-    padding-top: 50px;
-    padding-bottom: 150px;
+    font-family: 'Exo 2', sans-serif !important;
+    font-size: 125px !important;
+	margin-top: 0px;
+	padding-top: 80px;
+    padding-bottom: 120px !important;
     text-transform: capitalize !important;
 }
 
-.container {
-    padding-bottom: 0px !important;
-}
-
 .info {
-    color: white;
-    padding-bottom: 225px;
+	font-family: 'Open Sans', sans-serif;
+    color: #303030;
+	background-color: rgb(237, 237, 237);
+	background-color: rgba(237, 237, 237, .8);
+	text-align: center;
+	width: 50em;
+	margin: 0 auto;
+	padding: 50px !important;
+	padding-bottom: 70px !important;
 }
 
 .info h2 {
-    text-align: center;
-    font-size: 35px;
+    font-size: 47px !important;
+	letter-spacing: 3px !important;
+	padding-bottom: 25px;
+	padding-top: 15px;
 }
 
 .info li {
-    font-size: 17px !important;
-    text-indent: 10px;
+    font-size: 25px !important;
+	padding-bottom: 10px;
 }
 
 .info ul {
     list-style-type: none;
+	padding-bottom: 10px !important;
+	text-align: left;
+	display: inline-block;
 }
 
 .info ul li:before {
     content: '\2713';
     display: inline-block;
-    color: cyan;
+    color: #00CFCF;
     padding: 0 6px 0 0;
+} 
+
+.main-bottom-margin {
+	padding: 15px;
 }
+
+.bottom-margin {
+	background-color: white;
+	padding: 20px;
+}
+
+.slider-nav {
+	text-align: center;
+	padding-top: 43%;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.slider-dots li {
+  color: #bbbcbc;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.slider-dots li.active-dot {
+  color: #363636;
+}
+

@@ -1,20 +1,49 @@
-.container li, p {
+li, p {
     font-weight: lighter;
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+.navbar {
+	margin-bottom: 10px;
+}
+
+.main {
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 #self {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    background-color: #303030;
-    outline: 3px solid cyan;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+	background-color: #303030;
+	padding: 10px;
+	vertical-align: center;
 }
 
 .education {
     background-color: LightGray;
-    padding-left: 10px;
-    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 .education h4 {
@@ -30,6 +59,16 @@
 
 .skills {
     text-indent: 0px;
+	padding-bottom: 20px;
+}
+
+.skills>div {
+	margin: 20px;
+}
+
+.center-list {
+	width: 20em;
+	margin: auto;
 }
 
 .skills h2 {
@@ -42,6 +81,7 @@
 .skills h3 {
     text-align: center;
     text-indent: 0 !important;
+	padding-bottom: 10px;
 }
 
 .skills h4 {

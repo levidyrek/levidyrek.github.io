@@ -1,67 +1,76 @@
 /* Main CSS file that all html files use as a basic layout */
 
 body {
-    background-color: #202020 !important;
+    background-color: #F1F1F1 !important;
+	font-family: 'Quicksand', sans-serif;
+    color: #202020;
+	padding: 0px !important;
+	margin: 0px !important;
 }
-
-.nav {
-    border-style: solid;
-    border-color: cyan;
-    background-color: #303030;
-    padding-top: 10px;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    padding-right: 25px;
-}
-
-.nav a:hover {
-    text-decoration: none;
-    color: cyan;
-}
-
-.nav-margin {
-    padding: 15px;
-}
-
-.top-margin {
-    padding: 10px;
-} 
 
 .container {
-    font-family: 'Quicksand', sans-serif;
-    color: #202020;
-    padding-bottom: 40px;
-    background-color: WhiteSmoke;
+	font-family: 'Quicksand', sans-serif;
 }
 
-.container h1, h2, h3 {
+h1, h2, h3 {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-#current-page {
-    color: cyan !important;
+.navbar {
+    background-color: white;
+	margin: 0;
+	padding: 8px;
+	border-style: none !important;
+	border-radius: 0;
 }
 
-/* Footer */
-.contact {
-    color: LightGray;
-    text-align: center;
+.navbar ul {
+	margin: 0 !important;
+	display: inline;
+	text-align: center;
 }
 
-.contact a {
-    color: LightCyan;
+.navbar li {
+    display: inline;
+	padding-bottom: 15px;
+	margin: 0px !important;
 }
 
-.contact a:hover {
-    color: cyan;
+.navbar a {
+    text-transform: uppercase;
     text-decoration: none;
+	font-size: 14px;
+    color: black;
+	size: inherit;
+    padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 17px;
+	padding-bottom: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    background-color: #DADADA;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+	background-color: white;
+	display: inline-block;
+}
+
+.dropdown-menu li {
+	padding-top: 2px !important;
+	padding-bottom: 0px !important;
+}
+
+#current-page {
+	border-bottom: solid #191919 4px;
+}
+
+#logo {
+	margin: 0;
+	vertical-align: middle;
+	display: inline;
 }
