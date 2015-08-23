@@ -2,79 +2,74 @@
 <html>
 
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:700|Ubuntu+Condensed|Satisfy' rel='stylesheet' type='text/css'>
-    <link href="../stylesheets/main.css" rel="stylesheet" >
-    <link href="../stylesheets/projects.css" rel="stylesheet" >
-    <title>My Projects - Levi Payne</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!-- Google Analytics -->
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63481408-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+	<link rel="shortcut icon" href="images/icon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:700|Ubuntu+Condensed|Satisfy' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="stylesheets/main.css" rel="stylesheet" >
+    <link href="stylesheets/projects.css" rel="stylesheet" >
+	
+	<title>My Projects - Levi Payne</title>
   </head>
 
   <body>
-    <div class="container">
-
-      <div class="row">
-	<div class="col-md-12">
-	  <div class="top-margin">
-	  </div>
-	</div>
-      </div>
-      <div class="nav">
-	<ul>
-	  <li><a href="../index.html">Home</a></li>
-	  <li><a href="../AboutMe/index.html">About Me</a></li>
-	  <li><a id="current-page" href="index.html">My Projects</a></li>
-	  <li><a href="../ContactMe/index.html">Contact Me</a></li>
-	</ul>
-      </div>
-
-      <div class="row">
-	<div class="col-md-12">
-	  <div class="nav-margin">
-	  </div>
-	</div>
-      </div>
+	<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			<img src="images/logo35x35.png" id="logo"></img>
+			<ul class="menu">
+			  <li><a href="home.html">Home</a></li
+			  ><li><a href="about.html">About Me</a></li
+			  ><li id="current-page" class="dropdown"><a class="dropdown-toggle disabled" data-toggle="dropdown" href="projects.html">My Projects</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<li><a href="MyProjects/ghost-project.html">Ghost Hunters App</a></li>
+					<li><a href="MyProjects/pweb-project.html">Personal Website</a></li>
+					<li><a href="MyProjects/leo-project.html">Raspberry Pi</a></li>
+				</ul>
+			  </li
+			  ><li><a href="contact.html">Contact Me</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="main">
+    <div class="container-fluid">
       <h1>Projects</h1>
       <div class="projects">
 	<div class="row">
-	  <div class="col-md-4">
+		<div class="col-md-2"></div>
+	  <div class="col-md-2">
 	    <div class="project1">
-	      <a href="pweb-project.html">
-		<img src="../images/homepage-screenshot.jpeg">
-		<h4>Personal Website</h4>
+	      <a href="MyProjects/pweb-project.html">
+			<img src="images/frontpage-screenshot.jpg">
+			<p>Personal Website</p>
 	      </a>
 	    </div>
 	  </div>
-	  <div class="col-md-4">
+	  <div class="col-md-1"></div>
+	  <div class="col-md-2">
 	    <div class="project2">
-	      <a href="leo-project.html">
-		<img src="../images/pi-logo.jpg">
-		<h4>Raspberry Pi: Project Leo</h4>
+	      <a href="MyProjects/leo-project.html">
+		<img src="images/pi-logo.jpg">
+		Raspberry Pi: Project Leo
 	      </a>
 	    </div>
-	  </div> <div class="col-md-4">
-	    <div class="project3">
-	      <a href="ghost-project.html">
-		<img src="../images/gh-screenshot.jpg">
-		<h4>Ghost Hunters Android App</h4>
-	      </a>
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-2">
+			<div class="project3">
+			<a href="MyProjects/ghost-project.html">
+				<img src="images/gh-screenshot.jpg">
+				Ghost Hunters Android App
+			</a>
 	    </div>
 	  </div>
+	  <div class="col-md-2"></div>
 	</div>
+	<h2>More coming soon!</h2>
 	<!-- To be used for future projects
 	<div class="row">
 	  <div class="col-md-4">
@@ -103,21 +98,26 @@
 	  </div>
 	</div> -->
       </div>
-
+	  <!--<div class="extra-space">
+		<h2>More coming soon!</h2>
+		</div>-->
     </div>
+	</div>
+	
+	<!--Scripts-->
+		<script src="jquery-1.11.3.js"></script>
+		<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+		<script src="scripts/projects.js"></script>
+		 <!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <hr>
-    <footer>
-      <div class="contact">
-	<address>
-	  Created and administered by:<br>
-	  Levi Payne<br>
-	  Email: <a href="mailto:levi.dyrek@gmail.com" target="_blank">levi.dyrek@gmail.com</a><br>
-	  Github: <a href="https://github.com/levidyrek" target="_blank">https://github.com/levidyrek</a><br>
-	  BitBucket: <a href="https://bitbucket.org/levi_payne" target="_blank">https://bitbucket.org/levi_payne</a><br>
-	  LinkedIn: <a href="https://www.linkedin.com/pub/levi-payne/91/406/545" target="_blank">https://www.linkedin.com/pub/levi-payne/91/406/545</a>
-	</address>
-      </div>
-    </footer>
+		  ga('create', 'UA-63481408-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
   </body>
 </html>

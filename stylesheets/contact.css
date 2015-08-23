@@ -1,9 +1,11 @@
 .contact-main {
-    background-color: #303030;
-    color: white;
+    background-color: white;
+    color: #303030;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-bottom: 2px;
+	margin-top: 0px !important;
+	font-size: 18px;
 }
 
 .contact-main a {
@@ -13,4 +15,18 @@
 .contact-main a:hover {
     color: cyan;
     text-decoration: none;
+}
+
+.header {
+	background-color: LightCyan;
+	margin-top: 100px;
+	padding: 10px;
+	font-family: 'Exo 2', sans-serif;
+	padding-left: 20px;
+}
+
+.header h2 {
+	margin: 0px !important;
+	text-transform: Capitalize;
+	font-weight: lighter;
 }

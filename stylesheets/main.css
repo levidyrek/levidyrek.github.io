@@ -1,7 +1,7 @@
 /* Main CSS file that all html files use as a basic layout */
 
 body {
-    background-color: #F1F1F1 !important;
+    background-color: #E0E0E0 !important;
 	font-family: 'Quicksand', sans-serif;
     color: #202020;
 	padding: 0px !important;
@@ -23,6 +23,7 @@ h1, h2, h3 {
 	padding: 8px;
 	border-style: none !important;
 	border-radius: 0;
+	box-sizing: border-box;
 }
 
 .navbar ul {
@@ -33,6 +34,7 @@ h1, h2, h3 {
 
 .navbar li {
     display: inline;
+	padding-top: 17px;
 	padding-bottom: 15px;
 	margin: 0px !important;
 }
@@ -42,31 +44,39 @@ h1, h2, h3 {
     text-decoration: none;
 	font-size: 14px;
     color: black;
-	size: inherit;
     padding-right: 25px;
 	padding-left: 25px;
-	padding-top: 17px;
-	padding-bottom: 20px;
 }
 
-.navbar a:hover {
+.navbar li:hover {
     text-decoration: none;
-    background-color: #DADADA;
+    background-color: #F1F1F1;
+	border-bottom: solid #F1F1F1 4px;
+}
+
+.dropdown-menu a {
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
 }
 
 .dropdown-menu {
 	border-radius: 0;
+	margin: 0px !important;
+	padding: 0px !important;
 	background-color: white;
-	display: inline-block;
+	box-shadow: none !important;
 }
 
-.dropdown-menu li {
-	padding-top: 2px !important;
-	padding-bottom: 0px !important;
+.dropdown {
+	box-sizing: border-box;
 }
 
 #current-page {
 	border-bottom: solid #191919 4px;
+}
+
+#current-page:hover {
+	border-bottom: solid #191919 4px !important;
 }
 
 #logo {

@@ -20,6 +20,12 @@ var main = function() {
 		(($('.dropdown-menu').width() - $('.dropdown-toggle').width()) / 4.0); // dropdown left position
 	$('.dropdown-menu').css('left', ddLeft); // centers dropdown beneath button
 	
+	//Fixes width of MyProjects <a> element in navbar to match parent <li> element
+	var extraPadding = (($('.dropdown').position().left + $('.dropdown-toggle').outerWidth()) - 
+		($('.dropdown').position().left + $('.dropdown').outerWidth())) / 2;
+	$('.dropdown-toggle').css('padding-left', $('.dropdown-toggle').css('padding-left') + extraPadding);
+	$('.dropdown-toggle').css('padding-right', $('.dropdown-toggle').css('padding-right') + extraPadding);
+	
 	$('.dropdown-menu').hide();
 	
 	$('.dropdown').mouseover(function() {

@@ -1,28 +1,47 @@
+.main {
+	margin: 20px;
+	background-color: white;
+	padding-bottom: 110px;
+	font-family: 'Open-sans', sans-serif;
+	min-height: 850px;
+    height: auto !important;
+    height: 850px;
+}
+
+h3, h4 {
+	font-family: 'Quicksand', sans-serif !important;
+}
+
 h2 {
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+	font-family: 'Exo 2', sans-serif;
+	text-transform: capitalize;
+	font-weight: lighter;
 }
 
 .brief {
     line-height: 25px !important;
     background-color: LightCyan;
     padding: 10px;
-}
-
-.brief p {
-    font-size: 2000px !important;
+	font-size: 18px;
+	font-weight: lighter;
+	text-indent: 10px;
+	margin-bottom: 20px;
 }
 
 .brief h4 {
     display: inline;
     padding-right: 7px;
+	font-weight: bold;
 }
 
 .description {
-    padding-left: 10px;
+    padding-left: 20px;
     padding-bottom: 5px;
-    padding-right: 10px;
-    background-color: LightGray;
+    padding-right: 20px;
+    background-color: #E1E1E1;
+	font-size: 16px;
 }
 
 .description h3 {
@@ -30,12 +49,17 @@ h2 {
     padding-top: 5px;
 }
 
-.description p {
-    font-size: 15px !important;
+.description h4 {
+	font-weight: bold;
+}
+
+p {
+    font-size: 18px !important;
+	font-weight: lighter;
 }
 
 #project-pic {
-    padding-left: 10px;
+    padding-left: 50px;
     padding-bottom: 20px;
 }
 
