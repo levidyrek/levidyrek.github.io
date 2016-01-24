@@ -18,7 +18,7 @@ h1, h2, h3 {
 }
 
 .navbar {
-    background-color: white;
+  background-color: white;
 	margin: 0;
 	padding: 8px;
 	border-style: none;
@@ -37,24 +37,26 @@ nav ul {
 }
 
 .navbar li {
-    display: inline;
+  display: inline;
 	padding-top: 17px;
 	padding-bottom: 15px;
 	margin: 0px;
 }
 
 .navbar a {
-    text-transform: uppercase;
-    text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
 	font-size: 14px;
-    color: black;
-    padding-right: 25px;
+  color: black;
+  padding-right: 25px;
 	padding-left: 25px;
+	padding-top: 25px;
+	padding-bottom: 20px;
 }
 
 .navbar li:hover {
-    text-decoration: none;
-    background-color: #F1F1F1;
+  text-decoration: none;
+  background-color: #F1F1F1;
 	border-bottom: solid #F1F1F1 4px;
 }
 
@@ -69,7 +71,8 @@ nav ul {
 	padding: 0px;
 	background-color: white;
 	box-shadow: none;
-	top: 52px;
+	top: 53px;
+	border: none !important;
 }
 
 .dropdown {
@@ -103,4 +106,20 @@ nav ul {
 .mobi img {
 	vertical-align: center;
 	margin-right: 10px;
+}
+
+.mobi #logo {
+	display: none;
+}
+
+.mobi .menu {
+	padding: 0 !important;
+}
+
+.mobi .container-fluid {
+	padding: 0 !important;
+}
+
+.mobi .navbar {
+	padding-left: 0 !important;
 }

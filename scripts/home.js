@@ -1,8 +1,9 @@
 var main = function() {
 	
-	/** This block of code adjusts the size of the <a> elements in the menu so that when hovered,
+	/*/** This block of code adjusts the size of the <a> elements in the menu so that when hovered,
 		the background matches the bounds of the navbar
 	*/
+	/*
 	var current = $('.menu li').first(); //current list item in navbar
 	var nested = current.children().first(); //nested <a> element in current list item
 	var aTop = nested.position().top; //top position of <a> elements in list
@@ -15,6 +16,7 @@ var main = function() {
 		nested.css('padding-bottom', navBot - aBot);
 		current = current.next();
 	}
+	*/
 	
 	/*// Corrects position of dropdown menu
 	$('.dropdown-menu').css('top', $('.navbar').outerHeight() + 1 + 'px');
