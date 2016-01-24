@@ -1,4 +1,5 @@
 var main = function() {
+	
 	/** This block of code adjusts the size of the <a> elements in the menu so that when hovered,
 		the background matches the bounds of the navbar
 	*/
@@ -14,24 +15,34 @@ var main = function() {
 		nested.css('padding-bottom', navBot - aBot);
 		current = current.next();
 	}
-	// Corrects position of dropdown menu
-	$('.dropdown-menu').css('top', $('.navbar').outerHeight() + 1 + 'px');
-	var ddLeft = $('.dropdown-menu').position().left - 
-		(($('.dropdown-menu').width() - $('.dropdown-toggle').width()) / 4.0); // dropdown left position
-	$('.dropdown-menu').css('left', ddLeft); // centers dropdown beneath button
 	
+	/*// Corrects position of dropdown menu
+	$('.dropdown-menu').css('top', $('.navbar').outerHeight() + 1 + 'px');
+	var ddLeft = $('.projects-menu').position().left - 
+		(($('.projects-menu').width() - $('.dropdown-toggle').width()) / 4.0); // dropdown left position
+	$('.dropdown-menu').css('left', ddLeft); // centers dropdown beneath button */
+	
+	// Hide or show elements at first
 	$('.slide2').hide();
 	$('.slide3').hide();
-	$('.dropdown-menu').hide();
+	$('.projects-menu').hide();
+	$('.main-menu').hide();
 	$('.slider-nav').show();
 	
-	$('.dropdown').mouseover(function() {
-		$('.dropdown-menu').show();
+	// Allows dropdown menu for projects to appear when button is hovered
+	$('.projects-button').mouseover(function() {
+		$('.projects-menu').show();
 	});
-	$('.dropdown').mouseout(function() {
-		$('.dropdown-menu').hide();
+	$('.projects-button').mouseout(function() {
+		$('.projects-menu').hide();
 	});
 	
+	// Allows main dropdown menu to be shown when menu button is visible (on mobile only)
+	$('#menu-a').click(function() {
+		$('.main-menu').toggle();
+	});
+	
+	// Functionality of switching between slides and updating the dot indicators
 	$('.slides').click(function() {
 		var next_slide = $('.active-slide').next();
 		var next_dot = $('.active-dot').next();
@@ -53,6 +64,14 @@ var main = function() {
 		$('.active-slide').removeClass('active-slide');
 		next_slide.addClass('active-slide');
 	});
+	
+	// Restive API stuff. Currently configured to add classes to indicate when page is accessed via mobile
+	// devices, orientation, etc.
+	$('body').restive({
+          breakpoints: ['10000'],
+          classes: ['nb'],
+          turbo_classes: 'is_mobile=mobi,is_phone=phone,is_tablet=tablet,is_landscape=landscape'
+    });
 }
 
 $(document).ready(main);

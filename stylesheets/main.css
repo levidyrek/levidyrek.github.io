@@ -1,11 +1,11 @@
 /* Main CSS file that all html files use as a basic layout */
 
 body {
-    background-color: #E0E0E0 !important;
+    background-color: #E0E0E0;
 	font-family: 'Quicksand', sans-serif;
     color: #202020;
-	padding: 0px !important;
-	margin: 0px !important;
+	padding: 0px;
+	margin: 0px;
 }
 
 .container {
@@ -21,22 +21,26 @@ h1, h2, h3 {
     background-color: white;
 	margin: 0;
 	padding: 8px;
-	border-style: none !important;
+	border-style: none;
 	border-radius: 0;
 	box-sizing: border-box;
 }
 
-.navbar ul {
-	margin: 0 !important;
+nav ul {
+	margin: 0;
 	display: inline;
 	text-align: center;
+}
+
+#menu-button {
+	display: none;
 }
 
 .navbar li {
     display: inline;
 	padding-top: 17px;
 	padding-bottom: 15px;
-	margin: 0px !important;
+	margin: 0px;
 }
 
 .navbar a {
@@ -55,16 +59,17 @@ h1, h2, h3 {
 }
 
 .dropdown-menu a {
-	padding-top: 4px !important;
-	padding-bottom: 4px !important;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 .dropdown-menu {
 	border-radius: 0;
-	margin: 0px !important;
-	padding: 0px !important;
+	margin: 0px;
+	padding: 0px;
 	background-color: white;
-	box-shadow: none !important;
+	box-shadow: none;
+	top: 52px;
 }
 
 .dropdown {
@@ -76,11 +81,26 @@ h1, h2, h3 {
 }
 
 #current-page:hover {
-	border-bottom: solid #191919 4px !important;
+	border-bottom: solid #191919 4px;
 }
 
 #logo {
 	margin: 0;
 	vertical-align: middle;
 	display: inline;
+}
+
+/* --------------- Mobile ------------------- */
+
+.mobi .menu > li {
+	display: none;
+}
+
+.mobi #menu-button {
+	display: inline !important;
+}
+
+.mobi img {
+	vertical-align: center;
+	margin-right: 10px;
 }

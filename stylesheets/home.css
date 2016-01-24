@@ -34,7 +34,6 @@ h1 {
 .info {
 	font-family: 'Open Sans', sans-serif;
     color: #303030;
-	background-color: rgb(237, 237, 237);
 	background-color: rgba(237, 237, 237, .8);
 	text-align: center;
 	width: 50em;
@@ -80,7 +79,7 @@ h1 {
 
 .slider-nav {
 	text-align: center;
-	padding-top: 43%;
+	margin-top: 20px;
 }
 
 .slider-dots {
