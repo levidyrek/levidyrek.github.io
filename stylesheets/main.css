@@ -1,11 +1,11 @@
 /* Main CSS file that all html files use as a basic layout */
 
 body {
-    background-color: #E0E0E0 !important;
+    background-color: #E0E0E0;
 	font-family: 'Quicksand', sans-serif;
     color: #202020;
-	padding: 0px !important;
-	margin: 0px !important;
+	padding: 0px;
+	margin: 0px;
 }
 
 .container {
@@ -18,53 +18,61 @@ h1, h2, h3 {
 }
 
 .navbar {
-    background-color: white;
+  background-color: white;
 	margin: 0;
 	padding: 8px;
-	border-style: none !important;
+	border-style: none;
 	border-radius: 0;
 	box-sizing: border-box;
 }
 
-.navbar ul {
-	margin: 0 !important;
+nav ul {
+	margin: 0;
 	display: inline;
 	text-align: center;
 }
 
+#menu-button {
+	display: none;
+}
+
 .navbar li {
-    display: inline;
+  display: inline;
 	padding-top: 17px;
 	padding-bottom: 15px;
-	margin: 0px !important;
+	margin: 0px;
 }
 
 .navbar a {
-    text-transform: uppercase;
-    text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
 	font-size: 14px;
-    color: black;
-    padding-right: 25px;
+  color: black;
+  padding-right: 25px;
 	padding-left: 25px;
+	padding-top: 25px;
+	padding-bottom: 20px;
 }
 
 .navbar li:hover {
-    text-decoration: none;
-    background-color: #F1F1F1;
+  text-decoration: none;
+  background-color: #F1F1F1;
 	border-bottom: solid #F1F1F1 4px;
 }
 
 .dropdown-menu a {
-	padding-top: 4px !important;
-	padding-bottom: 4px !important;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 .dropdown-menu {
 	border-radius: 0;
-	margin: 0px !important;
-	padding: 0px !important;
+	margin: 0px;
+	padding: 0px;
 	background-color: white;
-	box-shadow: none !important;
+	box-shadow: none;
+	top: 53px;
+	border: none !important;
 }
 
 .dropdown {
@@ -76,11 +84,42 @@ h1, h2, h3 {
 }
 
 #current-page:hover {
-	border-bottom: solid #191919 4px !important;
+	border-bottom: solid #191919 4px;
 }
 
 #logo {
 	margin: 0;
 	vertical-align: middle;
 	display: inline;
+}
+
+/* --------------- Mobile ------------------- */
+
+.mobi .menu > li {
+	display: none;
+}
+
+.mobi #menu-button {
+	display: inline !important;
+}
+
+.mobi img {
+	vertical-align: center;
+	margin-right: 10px;
+}
+
+.mobi #logo {
+	display: none;
+}
+
+.mobi .menu {
+	padding: 0 !important;
+}
+
+.mobi .container-fluid {
+	padding: 0 !important;
+}
+
+.mobi .navbar {
+	padding-left: 0 !important;
 }
