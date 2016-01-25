@@ -16,14 +16,6 @@ var main = function() {
 	$('#menu-a').click(function() {
 		$('.main-menu').toggle();
 	});
-	
-	// Restive API stuff. Currently configured to add classes to indicate when page is accessed via mobile
-	// devices, orientation, etc.
-	$('body').restive({
-          breakpoints: ['10000'],
-          classes: ['nb'],
-          turbo_classes: 'is_mobile=mobi,is_phone=phone,is_tablet=tablet,is_landscape=landscape'
-    });
 }
 
 $(document).ready(main);
