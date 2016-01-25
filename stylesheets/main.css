@@ -1,9 +1,9 @@
 /* Main CSS file that all html files use as a basic layout */
 
 body {
-    background-color: #E0E0E0;
+  background-color: #E0E0E0;
 	font-family: 'Quicksand', sans-serif;
-    color: #202020;
+  color: #202020;
 	padding: 0px;
 	margin: 0px;
 }
@@ -60,9 +60,9 @@ nav ul {
 	border-bottom: solid #F1F1F1 4px;
 }
 
-.dropdown-menu a {
-	padding-top: 4px;
-	padding-bottom: 4px;
+.dropdown-menu li {
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .dropdown-menu {
@@ -73,6 +73,11 @@ nav ul {
 	box-shadow: none;
 	top: 53px;
 	border: none !important;
+}
+
+.dropdown-menu a {
+	font-size: 18px;
+	text-transform: capitalize;
 }
 
 .dropdown {
