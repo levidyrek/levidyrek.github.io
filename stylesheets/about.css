@@ -33,20 +33,21 @@ h5 {
 }
 
 #self {
-    margin-top: 60px;
-    margin-left: 60px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+	display: block;
 	background-color: #303030;
-	padding: 10px;
 	vertical-align: center;
+	margin-left: auto;
+  margin-right: auto;
+	padding: 5px;
+	margin-bottom: 20px;
 }
 
 .education {
-    background-color: white;
-    padding-left: 20px;
-    padding-bottom: 10px;
+  background-color: white;
+  padding-left: 20px;
+  padding-bottom: 10px;
 	padding-top: 10px;
+	padding-right: 20px;
 }
 
 .education h3 {
@@ -61,10 +62,11 @@ h5 {
  }
 
 .bio {
-    background-color: LightCyan;
+  background-color: LightCyan;
 	padding-left: 20px;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 	padding-top: 10px;
+	padding-right: 20px;
 }
 
 .skills {
@@ -104,15 +106,17 @@ h5 {
 .soft-dev {
     background-color: white;
     padding-bottom: 5px;
-    padding-left: 7px;
+    padding-left: 20px;
     padding-top: 1px;
+		padding-right: 20px;
 }
 
 .misc, .languages {
     background-color: LightCyan;
     padding-bottom: 5px;
-    padding-left: 7px;
+    padding-left: 20px;
     padding-top: 1px;
+		padding-right: 20px;
 }
 
 .skills h2 {
@@ -125,4 +129,16 @@ h5 {
 
 .languages hr, .misc hr {
 	border-color: #E0E0E0;
+}
+
+.languages, .soft-dev, .misc {
+	margin-top: 10px;
+}
+
+/* ------------------- Desktop Styling ------------------- */
+
+@media(min-width:1200px){
+		#self {
+			margin-top: 75px;
+		}
 }
