@@ -24,9 +24,9 @@ h1 {
   color: white !important;
   text-align: center;
   font-family: 'Exo 2', sans-serif !important;
-  font-size: 125px !important;
+  font-size: 30vw !important;
 	margin-top: 30px;
-  margin-bottom: 75px !important;
+  margin-bottom: 40vw !important;
   text-transform: capitalize !important;
 }
 
@@ -39,6 +39,7 @@ h1 {
 	margin: 0 auto;
 	padding: 50px !important;
 	padding-bottom: 70px !important;
+	border-radius: 3px;
 }
 
 .info h2 {
@@ -114,16 +115,17 @@ h1 {
 	width: 45%;
 	padding: 10px;
 	margin-bottom: 50px;
-	font-size: 17px;
+	font-size: 4vw;
 	color: white;
+	border-radius: 3px;
 }
 
-#learn-more-button:hover {
+#about-me-button:hover {
 	text-decoration: none;
 	background-color: #3365ff;
 }
 
-@media(min-width:1200px){
+@media(min-width:768px){
 		.slider-dots {
 			display: inline-block;
 		}
@@ -136,8 +138,13 @@ h1 {
 			display: none;
 		}
 		
+		.col-centered a {
+			font-size: 17px;
+}
+		
 		h1 {
 			margin-bottom: 125px !important;
 			margin-top: 80px !important;
+			font-size: 125px !important;
 		}
 }

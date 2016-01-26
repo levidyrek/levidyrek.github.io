@@ -1,24 +1,26 @@
-h1 {
+.projects h1 {
 	padding-top: 15px;
 	margin-top: 20px;
-	margin-bottom: 0px;
-    text-align: center;
-    padding-bottom: 15px;
+	margin-bottom: 40px;
+	margin-left: 0;
+	margin-right: 0;
+  text-align: center;
+  padding-bottom: 15px;
 	background-color: LightCyan;
 	font-family: 'Exo 2', sans-serif;
 	font-weight: lighter;
 	text-transform: capitalize;
+	border-radius: 3px 3px 0px 0px;
 }
 
 .projects {
-    text-align: center;
+  text-align: center;
 	background-color: white;
-	padding-top: 100px;
-	padding-bottom: 100px;
 	margin-top: 0px;
-	min-height: 780px;
-    height: auto !important;
-    height: 780px;
+  height: auto !important;
+	border-radius: 0px 0px 3px 3px;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
 }
 
 .projects, h1 {
@@ -27,16 +29,18 @@ h1 {
 }
 
 .projects a {
-    color: #202020;
+  color: #202020;
 	text-align: center;
 	font-size: 18px;
 	display: block;
-	float: left;
+	margin: 0 auto;
+	padding-bottom: 15px;
 }
 
 .projects img {
 	padding-bottom: 5px;
 	display: block;
+	margin: 0 auto;
 }
 
 .projects a:hover {
@@ -56,4 +60,10 @@ h2 {
 .extra-space {
 	background-color: white;
 	padding-bottom: 100px;
+}
+
+@media(min-width:992px){
+	.projects {
+		padding-bottom: 20px;
+	}
 }
