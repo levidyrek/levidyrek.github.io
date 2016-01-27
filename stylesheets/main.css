@@ -51,7 +51,7 @@ nav ul {
   padding-right: 25px;
 	padding-left: 25px;
 	padding-top: 25px;
-	padding-bottom: 20px;
+	padding-bottom: 21px;
 }
 
 .navbar li:hover {
@@ -138,5 +138,9 @@ nav ul {
 
 	#menu-button {
 		display: none !important;
+	}
+	
+	.navbar {
+		text-align: initial;
 	}
 }
