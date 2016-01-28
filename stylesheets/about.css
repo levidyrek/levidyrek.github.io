@@ -1,3 +1,7 @@
+.main {
+	font-family: 'Open-sans', sans-serif;
+}
+
 .main li, .main p {
 	font-weight: lighter;
 	font-size: 6vw;
@@ -59,6 +63,10 @@ h5 {
 	text-transform: capitalize !important;
  } 
  
+ .education h5 {
+	 font-family: 'Exo 2', sans-serif;
+ }
+ 
  .education ul {
 	list-style-type: none;
  }
@@ -96,8 +104,9 @@ h5 {
 }
 
 .skills h3 {
-    text-align: center;
-    text-indent: 0 !important;
+	font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  text-indent: 0 !important;
 	padding-bottom: 5px;
 }
 

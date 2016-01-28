@@ -27,6 +27,7 @@ h2 {
 	font-weight: lighter;
 	text-indent: 10px;
 	margin-bottom: 5px;
+	vertical-align: center;
 }
 
 .brief h4 {
@@ -60,6 +61,7 @@ p {
 	display: block;
 	margin-bottom: 20px;
 	width: 90%;
+	vertical-align: center;
 }
 
 .brief a {
