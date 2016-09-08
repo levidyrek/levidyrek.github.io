@@ -10,32 +10,11 @@
     <title>Homepage - Levi Payne</title>
   </head>
   <body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-			<img src="images/logo35x35.png" id="logo"></img>
-			<ul class="menu">
-			  <li class="dropdown" id="menu-button"><a id="menu-a" class="dropdown-toggle disabled" data-toggle="dropdown"><img src="images/menu_icon.png">Menu</a>
-					<ul class="dropdown-menu main-menu" role="menu" aria-labelledby="dLabel">
-						<li><a href="about.html">About</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul
-			  ></li>
-				<li id="current-page"><a href="index.html">Home</a></li
-			  ><li><a href="about.html">About Me</a></li
-			  ><li class="dropdown projects-button"><a class="dropdown-toggle disabled" data-toggle="dropdown" href="projects.html">My Projects</a>
-				<ul class="dropdown-menu projects-menu" role="menu" aria-labelledby="dLabel">
-					<li><a href="MyProjects/ghost-project.html">Ghost Hunters App</a></li>
-					<li><a href="MyProjects/pweb-project.html">Personal Website</a></li>
-					<li><a href="MyProjects/leo-project.html">Raspberry Pi</a></li>
-					<li><a href="MyProjects/grocery-list-app.html">Grocery List App</a></li>
-					<li><a href="MyProjects/beerlamp.html">BeerLamp Internship</a></li>
-				</ul
-			  ></li
-			  ><li><a href="contact.html">Contact Me</a></li>
-			</ul>
-			</div>
-		</nav>
+		<?php
+			include_once("php/constants.php");
+			$page = HOME_PAGE;
+			include "php/navbar.php";
+		?>
 		<div class="slides">
 			<div class="slide1 container active-slide">
 					<h1>Levi Payne</h1>
