@@ -1,0 +1,19 @@
+Grocery List Android App
+
+/images/grocery-list-screenshot.png
+
+Status: Complete
+Languages: Java, XML
+Frameworks/APIs: Android Framework
+Other Contributors: Michelle Yao
+Repository: <a href="https://bitbucket.org/cs4720group/grocery-list-app" target="_blank">Bitbucket</a>
+
+This game was a project assigned at the University of Virginia in the CS 4720: Mobile Development class. 
+I worked with one other classmate, Michelle Yao. We were able to choose what kind of app we wanted to make, provided that it met certain requirements and used many features such as the use of the Google Maps API and a hardware sensor. 
+Thus, this app has some features that aren't necessary for a grocery list app, but it helped me understand and learn how to implement features including:
+<ul> 
+	<li>Data persistence</li>
+	<li>Ambient light sensor functionality</li>
+	<li>Google Maps API</li>
+	<li>Web service integration</li>
+</ul>

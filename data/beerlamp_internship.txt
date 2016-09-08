@@ -1,0 +1,15 @@
+BeerLamp Internship
+
+/images/beerlamp-logo.png
+
+Status: Complete
+Languages: Java, XML
+Frameworks/APIs: Android Framework
+Google Play Store Link: <a href="https://play.google.com/store/apps/details?id=com.beerlamp" target="_blank">BeerLamp</a><br>
+Website: <a href="https://beerlamp.co/" target="_blank">beerlamp.co</a>
+
+I joined BeerLamp, a small startup based in Charlottesville, VA in October 2015. They brought me on to help get the Android
+version of their app released. When I started, there was already a large codebase to get acquainted with. I primarily fixed
+bugs and finished incomplete features, but I also completed some features in their entirety. I mostly worked with one other
+person, the head iOS developer, on this project.<br><br>
+I learned a lot at BeerLamp; about working on a team and Android Development itself. The app is now available on the Google Play Store for free.

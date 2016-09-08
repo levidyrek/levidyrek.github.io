@@ -1,5 +1,7 @@
 var main = function() {
 	
+	// 
+	
 	// Hide or show elements at first
 	$('.slide2').hide();
 	$('.slide3').hide();
@@ -43,5 +45,14 @@ var main = function() {
 		next_slide.addClass('active-slide');
 	});
 }
+
+/*
+* Adjusts the positions of the info card and header on the home page
+* based on viewport size
+*/
+/* var adjustView = function() {
+	let viewHeight = $('.slides').height();
+	$('.)
+} */
 
 $(document).ready(main);
