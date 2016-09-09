@@ -1,7 +1,5 @@
 var main = function() {
 	
-	// 
-	
 	// Hide or show elements at first
 	$('.slide2').hide();
 	$('.slide3').hide();
