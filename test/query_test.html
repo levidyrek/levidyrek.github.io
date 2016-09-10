@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		
+		<script type="text/javascript">
+			// This script is a series of AJAX calls to test query.php
+			
+			const GET_TABLE = 100;
+			const UPDATE_TABLE = 101;
+			const SELECT_TABLE = 102;
+			const ADD_ROW = 103;
+			const REMOVE_ROW = 104;
+			
+			// Test 1: Retrieve table
+			$.post("../php/query.php", {action: GET_TABLE, table_name: "projects"}, function(data) {
+				alert(data);
+				let tableData = JSON.parse(data);
+				
+				// Display the table
+				document.write("<h2>Test 1: Retrieve table</h2><br>");
+				
+				let table = $('<table></table>');
+				for (let rowKey in tableData) {
+					let row = $('<tr></tr>');
+					for (let colKey in tableData[rowKey]) {
+						let col = $('<td></td>');
+						col.html(tableData[rowKey][colKey]);
+						row.append(col);
+					}
+					table.append(row);
+				}
+				$('body').append(table);
+				
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
