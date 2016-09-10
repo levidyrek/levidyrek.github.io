@@ -14,12 +14,14 @@
 	2. UPDATE_TABLE: update a row in a table
 		- Parameters: 
 			"table_name": [String] name of the table
+			"queries": [JSON] a list of queries, like so: <column>[<relational_operator]<value> to find rows to update
 			"values": [JSON] key->value pairs for each column to be updated
 		
-	3. SELECT_TABLE: query a table
+	3. SELECT_TABLE: select specified columns from specified rows
 		- Parameters:
 			"table_name": [String] name of the table
 			"queries": [JSON] a list of queries, like so: <column>[<relational_operator]<value>
+			"columns": (optional) [JSON] a list of column names to be returned. default value is '*', or all columns
 		- Returns: [JSON] the rows returned from the query
 		
 	4. ADD_ROW: add a row to a table
@@ -60,19 +62,55 @@
 	// See which action needs to be done
 	switch ($_POST["action"]) {
 		case GET_TABLE:
+			// Simply run the query
 			$q = "SELECT * FROM '$table'";
 			$result = $conn->query($q);
 			if ($result->num_rows > 0) {
+				$output = array();
 				while ($row = $result->fetch_assoc()) {
-					
+					$output[] = $row;
 				}
+				echo json_encode($output);
 			}
 			break;
 		case UPDATE_TABLE:
-
+			// Check for additional required params
+			(isset($_POST["values"]) && isset($_POST["queries"])) 
+				or die("Error: ensure all required params are set.");
+			$values = json_decode($_POST["values"]);
+			$queries = json_decode($_POST["queries"]);
+			
+			$q = "UPDATE '$table_name' SET ";
+			
+			// Add the values to be set to the query
+			$first = true;
+			foreach ($values as $name => $value) {
+				if (!$first) $q .= ",";
+				else $first = false;
+				$q .= $name . "=" . $value;
+			}
+			
+			// Add the queries at the end of the query
+			addQueriesToQuery($q, $queries);
+			
+			// Now ready to send off the query to the db and report success or failure
+			$conn->query($q) or die("Error: " . $conn->error);
+			echo "Successfully updated " . $conn->affected_rows . " rows.";
+			
 			break;
 		case SELECT_TABLE:
-
+			// Check for additional required params
+			isset($_POST["queries"]) or die("Error: ensure all required params are set.");
+			$queries = json_decode($_POST["queries"]);
+			
+			$q = "SELECT ";
+			
+			if (isset($_POST["columns"])) {
+				
+			}
+			else $q .= "* "; // No columns specified. Select all
+				
+			$columns = json_decode($_POST["columns"]);
 			break;
 		case ADD_ROW:
 
@@ -82,5 +120,28 @@
 			break;
 		default:
 			die("Error: POST variable 'action' has an unknown value.");
+	}
+	
+	/**
+		Adds queries (after the WHERE clause) from an array to an SQL query string
+		
+		@param &$q A reference to an SQL query string
+		@param $queries An array containing strings with relational queries (e.g. id=1)
+	**/
+	function addQueriesToQuery(&$q, $queries) {
+		$q .= " WHERE ";
+		$first = true;
+		foreach ($queries as $query) {
+			if (!$first) $q .= ",";
+			else $first = false;
+			$q .= $query;
+		}
+	}
+	
+	/**
+	
+	**/
+	function addSetValsToQuery(&$q, $values) {
+		
 	}
 ?>
