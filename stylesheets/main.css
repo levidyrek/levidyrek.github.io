@@ -1,9 +1,9 @@
 /* Main CSS file that all html files use as a basic layout */
 
 body {
-  background-color: #e6e6e6;
+  	background-color: #e6e6e6;
 	font-family: 'Quicksand', sans-serif;
-  color: #202020;
+  	color: #202020;
 	padding: 0px;
 	margin: 0px;
 }
@@ -37,26 +37,26 @@ nav ul {
 }
 
 .navbar li {
-  display: inline;
+	display: inline;
 	padding-top: 17px;
 	padding-bottom: 15px;
 	margin: 0px;
 }
 
 .navbar a {
-  text-transform: uppercase;
-  text-decoration: none;
+ 	text-transform: uppercase;
+	text-decoration: none;
 	font-size: 14px;
-  color: black;
-  padding-right: 25px;
+	color: black;
+	padding-right: 25px;
 	padding-left: 25px;
 	padding-top: 25px;
 	padding-bottom: 21px;
 }
 
 .navbar li:hover {
-  text-decoration: none;
-  background-color: #F1F1F1;
+  	text-decoration: none;
+  	background-color: #F1F1F1;
 	border-bottom: solid #F1F1F1 4px;
 }
 

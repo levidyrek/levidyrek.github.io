@@ -152,7 +152,7 @@
 			$q .= ")";
 			
 			// Run the query
-			$conn->query($q) or die("Query failed: " . $conn->error);
+			$conn->query($q) or die("Query '" . $q . "' failed: " . $conn->error);
 			echo "Query was successful.";
 
 			break;
