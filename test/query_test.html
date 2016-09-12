@@ -3,69 +3,9 @@
 	<head>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		
-		<script type="text/javascript">
-			// This script is a series of AJAX calls to test query.php
-			
-			const GET_TABLE = 100;
-			const UPDATE_TABLE = 101;
-			const SELECT_TABLE = 102;
-			const ADD_ROW = 103;
-			const REMOVE_ROW = 104;
-			
-			// ----------- Test 1: Retrieve table ----------------
-			let header = $('<h2>Test 1: Retrieve table</h2><br>');
-			let params = {action: GET_TABLE, table_name: "projects"};
-			runTest(header, params, true);
-
-			// ------------ Test 2: Add Row ----------------------
-			header = $('<h2>Test 2: Update table</h2><br>');
-			let values = {title: "test_proj", pic: "none.jpg", brief: "testing", description: "this is a test"};
-			params = {action: ADD_ROW, values: values, table_name: "projects"};
-			runTest(header, params, false);
-
-			// Get table to ensure row has been added
-			header = $('<h2></h2>');
-			params = {action: GET_TABLE, table_name: "projects"};
-			runTest(header, params, true);
-		
-				
-			/**
-				Runs an AJAX request to query.php and displays the result
-
-				@param	{jQuery}	header	A jQuery object to be inserted above test result
-				@param	{array}		params	An assoc. array of POST variables for the AJAX call
-				@param 	{boolean}	displayAsTable Determines where the result will be displayed as a table or as it is
-			**/
-			function runTest(header, params, displayAsTable) {
-				$.post("../php/query.php", params, function(data) {
-					
-					$('body').append(header);
-
-					// Display result
-					if (displayAsTable) {
-						let tableData = JSON.parse(data);
-						let table = $('<table></table>');
-						for (let rowKey in tableData) {
-							let row = $('<tr></tr>');
-							for (let colKey in tableData[rowKey]) {
-								let col = $('<td></td>');
-								col.html(tableData[rowKey][colKey]);
-								row.append(col);
-							}
-							table.append(row);
-						}
-						$('body').append(table);
-					}
-					else $('body').append($('<p>' + data + '</p>'));
-
-					$('body').append($('<br><br>'));
-				});
-			}
-			
-			
-		</script>
 	</head>
 	<body>
 		
+		<script src="query_test.js"></script>
 	</body>
 </html>

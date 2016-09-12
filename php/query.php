@@ -14,25 +14,25 @@
 	2. UPDATE_TABLE: update a row in a table
 		- Parameters: 
 			"table_name": [String] name of the table
-			"queries": [JSON] a list of queries, like so: <column>[<relational_operator]<value> to find rows to update
-			"values": [JSON] key=>value pairs for each column to be updated
+			"queries": [array] a list of queries, like so: <column>[<relational_operator]<value> to find rows to update
+			"values": [array] key=>value pairs for each column to be updated.
 		
 	3. SELECT_TABLE: select specified columns from specified rows
 		- Parameters:
 			"table_name": [String] name of the table
-			"queries": [JSON] a list of queries, like so: <column>[<relational_operator]<value>
-			"columns": (optional) [JSON] a list of column names to be returned. default value is '*', or all columns
+			"queries": [array] a list of queries, like so: <column>[<relational_operator]<value>
+			"columns": (optional) [array] a list of column names to be returned. default value is '*', or all columns
 		- Returns: [JSON] the rows returned from the query
 		
 	4. ADD_ROW: add a row to a table
 		- Parameters:
 			"table_name": [String] name of the table
-			"values": [JSON] key=>value pairs of columns names and corresponding values for the new row
+			"values": [array] key=>value pairs of columns names and corresponding values for the new row
 		
 	5. REMOVE_ROW: remove a row or rows from a table
 		- Parameters:
 			"table_name": [String] name of the table
-			"queries": [JSON] a list of queries, like so: <column>[<relational_operator]<value>
+			"queries": [array] a list of queries, like so: <column>[<relational_operator]<value>
 			
 	**/
 	
@@ -82,13 +82,14 @@
 			// Check for additional required params
 			(checkPOST("values") && checkPOST("queries")) 
 				or die($param_err);
-			$values = json_decode($_POST["values"]);
-			$queries = json_decode($_POST["queries"]);
+			$values = $_POST["values"];
+			$queries = $_POST["queries"];
 			
-			$q = "UPDATE '$table'";
+			$q = "UPDATE $table";
 			
 			// Add the values to be set to the query
 			$q .= " SET ";
+			addQuotesToStrings($values);
 			addItemsToQuery($q, $values, true);
 			
 			// Add the WHERE clause at the end of the query
@@ -96,20 +97,19 @@
 			addItemsToQuery($q, $queries, false);
 			
 			// Now ready to send off the query to the db and report success or failure
-			$conn->query($q) or die("Error: " . $conn->error);
+			$conn->query($q) or die("Query '" . $q . "' failed: " . $conn->error);
 			echo "Successfully updated " . $conn->affected_rows . " rows.";
 			
 			break;
 		case SELECT_TABLE:
 			// Check for additional required params
 			checkPOST("queries") or die($param_err);
-			$queries = json_decode($_POST["queries"]);
-			$columns = json_decode($_POST["columns"]);
+			$queries = $_POST["queries"];
 			
 			$q = "SELECT ";
 			
 			// Add columns if specified
-			if (isset($_POST["columns"]) && !empty($_POST["columns"])) {
+			if (checkPOST("columns")) {
 				$columns = $_POST["columns"];
 				addItemsToQuery($q, $columns, false);
 			}
@@ -124,14 +124,14 @@
 			
 			// Now, send off query
 			$result = $conn->query($q);
-			$result or die("Query failed: " . $conn->error);
+			$result or die("Query '" . $q . "' failed: " . $conn->error);
 			if ($result->num_rows > 0) {
 				$output = array();
 				while ($row = $result->fetch_assoc()) {
 					$output[] = $row;
 				}
 				echo json_encode($output);
-			}
+			} else echo "Query '" . $q . "' returned no results.";
 			
 			break;
 		case ADD_ROW:
@@ -148,6 +148,7 @@
 			
 			// Add the values
 			$q .= "VALUES (";
+			addQuotesToStrings($values);
 			addItemsToQuery($q, $values, false);
 			$q .= ")";
 			
@@ -164,11 +165,11 @@
 			$q = "DELETE FROM $table";
 			
 			// Add queries
-			$q .= "WHERE "; 
+			$q .= " WHERE "; 
 			addItemsToQuery($q, $queries, false);
 			
 			// Run query
-			$conn->query($q) or die("Query failed: " . $conn->error);
+			$conn->query($q) or die("Query '" . $q . "' failed: " . $conn->error);
 			echo "Query affected " . $conn->affected_rows . " rows.";
 			
 			break;
@@ -178,7 +179,7 @@
 	
 	/**
 		Adds items from an array to an SQL query string
-		Assumes a space is present before the last keyword of the existing query. Adds one after it's done
+		Assumes a space is present before the last keyword of the existing query.
 		
 		@param	string	&$q		A reference to an SQL query string
 		@param	array	$items	An array containing strings that need to be added to a query in a list format (e.g. item1,item2,item3)
@@ -187,11 +188,22 @@
 	function addItemsToQuery(&$q, $items, $pairs) {
 		$first = true;
 		foreach ($items as $name => $item) {
-			if (!$first) $q .= ",";
+			if (!$first) $q .= ", ";
 			else $first = false;
 			$q .= $pairs ? $name . "=" . $item  : $item;
 		}
-		$q .= " ";
+	}
+	
+	/**
+		Adds single quotes to each string in a array of items for the purpose of being added to a MySQL query
+		
+		@param	array	$values	A reference to an array of items
+	**/
+	function addQuotesToStrings(&$values) {
+		foreach ($values as &$value) {
+			if (strcmp(gettype($value), "string") == 0) $value = "'" . $value . "'"; 
+		}
+		unset($value);
 	}
 	
 	/**
