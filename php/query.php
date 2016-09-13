@@ -36,13 +36,7 @@
 			
 	**/
 	
-	// Constants
-	// Actions
-	define("GET_TABLE", 100); 
-	define("UPDATE_TABLE", 101);
-	define("SELECT_TABLE", 102); 
-	define("ADD_ROW", 103);
-	define("REMOVE_ROW", 104);
+	include "constants.php";
 	
 	$server = "localhost";
 	$username = "root";
@@ -90,6 +84,7 @@
 			// Add the values to be set to the query
 			$q .= " SET ";
 			addQuotesToStrings($values);
+			escapeApostrophes($values);
 			addItemsToQuery($q, $values, true);
 			
 			// Add the WHERE clause at the end of the query
@@ -102,10 +97,6 @@
 			
 			break;
 		case SELECT_TABLE:
-			// Check for additional required params
-			checkPOST("queries") or die($param_err);
-			$queries = $_POST["queries"];
-			
 			$q = "SELECT ";
 			
 			// Add columns if specified
@@ -116,11 +107,14 @@
 			else $q .= "* "; // No columns specified. Select all
 			
 			// Add table name
-			$q .= "FROM $table ";
+			$q .= " FROM $table ";
 			
 			// Add queries
-			$q .= "WHERE ";
-			addItemsToQuery($q, $queries, false);
+			if (checkPOST("queries")) {
+				$q .= "WHERE ";
+				$queries = $_POST["queries"];
+				addItemsToQuery($q, $queries, false);
+			}
 			
 			// Now, send off query
 			$result = $conn->query($q);
@@ -149,6 +143,7 @@
 			// Add the values
 			$q .= "VALUES (";
 			addQuotesToStrings($values);
+			escapeApostrophes($values);
 			addItemsToQuery($q, $values, false);
 			$q .= ")";
 			
@@ -213,5 +208,11 @@
 	**/
 	function checkPOST($name) {
 		return isset($_POST[$name]) && !empty($_POST[$name]);
+	}
+
+	function escapeApostrophes(&$values) {
+		foreach ($values as &$value) {
+			str_replace("'", "''", $value);
+		}
 	}
 ?>
