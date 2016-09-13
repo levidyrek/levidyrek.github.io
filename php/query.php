@@ -6,30 +6,25 @@
 	 
 	 -------- ACTIONS ($_POST["action"])-----------
 	 
-	1. GET_TABLE: retrieve an entire table
-		- Parameters: 
-			"table_name": [String] name of the table 
-		- Returns: [JSON] the entire table
-	 
-	2. UPDATE_TABLE: update a row in a table
+	1. UPDATE_TABLE: update a row in a table
 		- Parameters: 
 			"table_name": [String] name of the table
 			"queries": [array] a list of queries, like so: <column>[<relational_operator]<value> to find rows to update
 			"values": [array] key=>value pairs for each column to be updated.
 		
-	3. SELECT_TABLE: select specified columns from specified rows
+	2. SELECT_TABLE: select specified columns from specified rows (or all of them)
 		- Parameters:
 			"table_name": [String] name of the table
-			"queries": [array] a list of queries, like so: <column>[<relational_operator]<value>
+			"queries": (optional) [array] a list of queries, like so: <column>[<relational_operator]<value>
 			"columns": (optional) [array] a list of column names to be returned. default value is '*', or all columns
-		- Returns: [JSON] the rows returned from the query
+		- Returns: [JSON] the rows returned from the query; the entire table if queries and columns are excluded.
 		
-	4. ADD_ROW: add a row to a table
+	3. ADD_ROW: add a row to a table
 		- Parameters:
 			"table_name": [String] name of the table
 			"values": [array] key=>value pairs of columns names and corresponding values for the new row
 		
-	5. REMOVE_ROW: remove a row or rows from a table
+	4. REMOVE_ROW: remove a row or rows from a table
 		- Parameters:
 			"table_name": [String] name of the table
 			"queries": [array] a list of queries, like so: <column>[<relational_operator]<value>
@@ -59,19 +54,6 @@
 
 	// See which action needs to be done
 	switch ($action) {
-		case GET_TABLE:
-			// Simply run the query
-			$q = "SELECT * FROM $table";
-			$result = $conn->query($q);
-			$result or die("Query '" . $q . "' failed: " . $conn->error);
-			if ($result->num_rows > 0) {
-				$output = array();
-				while ($row = $result->fetch_assoc()) {
-					$output[] = $row;
-				}
-				echo json_encode($output);
-			}
-			break;
 		case UPDATE_TABLE:
 			// Check for additional required params
 			(checkPOST("values") && checkPOST("queries")) 

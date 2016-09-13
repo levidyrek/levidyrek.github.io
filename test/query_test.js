@@ -1,6 +1,5 @@
 // This script is a series of AJAX calls to test query.php
 			
-const GET_TABLE = 100;
 const UPDATE_TABLE = 101;
 const SELECT_TABLE = 102;
 const ADD_ROW = 103;
@@ -48,7 +47,7 @@ promise = promise.then(function(value) {
 	let header = $('<h2>Test 1: Retrieve table</h2>');
 	div.append(header);
 	$('body').append(div);
-	let params = {action: GET_TABLE, table_name: "projects"};
+	let params = {action: SELECT_TABLE, table_name: "projects"};
 	return runTest(div, params, true);
 }, function(error) {
 	alert(error);
@@ -71,7 +70,7 @@ promise = promise.then(function(value) {
 promise = promise.then(function(value) {
 	let div = $('<div></div><br>');
 	$('body').append(div);
-	let params = {action: GET_TABLE, table_name: "projects"};
+	let params = {action: SELECT_TABLE, table_name: "projects"};
 	return runTest(div, params, true);
 }, function(error) {
 	alert(error);
@@ -108,7 +107,7 @@ promise = promise.then(function(value) {
 promise = promise.then(function(value) {
 	let div = $('<div></div><br>');
 	$('body').append(div);
-	let params = {action: GET_TABLE, table_name: "projects"};
+	let params = {action: SELECT_TABLE, table_name: "projects"};
 	return runTest(div, params, true);
 }, function(error) {
 	alert(error);
@@ -131,7 +130,7 @@ promise = promise.then(function(value) {
 promise = promise.then(function(value) {
 	let div = $('<div></div>');
 	$('body').append(div);
-	let params = {action: GET_TABLE, table_name: "projects"};
+	let params = {action: SELECT_TABLE, table_name: "projects"};
 	return runTest(div, params, true);
 }, function(error) {
 	alert(error);

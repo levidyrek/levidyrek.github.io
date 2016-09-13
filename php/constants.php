@@ -9,7 +9,6 @@
 	define('CONTACT_PAGE', 104);
 	
 	// DB Actions
-	define("GET_TABLE", 100); 
 	define("UPDATE_TABLE", 101);
 	define("SELECT_TABLE", 102); 
 	define("ADD_ROW", 103);
