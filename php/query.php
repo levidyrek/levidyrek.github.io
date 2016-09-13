@@ -131,7 +131,7 @@
 					$output[] = $row;
 				}
 				echo json_encode($output);
-			} else echo "Query '" . $q . "' returned no results.";
+			}
 			
 			break;
 		case ADD_ROW:
