@@ -5,30 +5,29 @@ const REMOVE_ROW = 104;
 
 var main = function() {
 	// Set up buttons
-	$('#submit_button').click(addProject);
-	$('#update_button').click(updateProject);
-	$('#delete_button').click(deleteProject);
+	$('#submit_button').click(addSlide);
+	$('#update_button').click(updateSlide);
+	$('#delete_button').click(deleteSlide);
 	
 	// Hide these for now
 	$('#update_button').hide();
 	$('#delete_button').hide();
 	
-	// Make it possible to edit existing project
+	// Make it possible to edit existing slide
 	setupSelect();
 }
 
 function setupSelect() {
-	// Retrieve projects from db
+	// Retrieve slides from db
 	var action = SELECT_TABLE;
-	var tableName = "projects";
+	var tableName = "slides";
 	var columns = ["id", "title"];
 	
-	let select = $('#proj_select');
+	let select = $('#slide_select');
 	select.empty();
 
 	$.post("../php/query.php", {action: action, table_name: tableName, columns: columns}, function(data) {
 		if (data) {
-			
 			let table = JSON.parse(data);
 			for (let key in table) {
 				let id = table[key].id;
@@ -38,31 +37,30 @@ function setupSelect() {
 			}
 			
 			// Handle when the load button is invoked
-			$('#load_button').click(loadProject);
+			$('#load_button').click(loadSlide);
 		}
 	});
 }
 
-var loadProject = function() {
+var loadSlide = function() {
 	// Submit an AJAX request for the specified row
 	let id = $('select').val();
 	let action = SELECT_TABLE;
-	let tableName = "projects";
+	let tableName = "slides";
 	let queries = ["id=" + id];
 
 	$.post("../php/query.php", {action: action, table_name: tableName, queries: queries}, function(data) {
 		if (data) {
 			let table = JSON.parse(data);
-			let project = table[0];
+			let slide = table[0];
 
 			// Populate fields
-			$('#title').val(project.title);
-			$('#pic').val(project.pic);
-			$('#brief').val(project.brief);
-			$('#description').val(project.description);
+			$('#title').val(slide.title);
+			$('#items').val(slide.items);
+			$('#background').val(slide.background);
 
 			// Set id for later use
-			sessionStorage.setItem("proj_id", project.id);
+			sessionStorage.setItem("slide_id", slide.id);
 
 			// Hide submit button, show update and delete buttons and handle clicks
 			$('#submit_button').hide();
@@ -72,17 +70,16 @@ var loadProject = function() {
 	});
 }
 
-var updateProject = function() {
-	let id = sessionStorage.getItem("proj_id");
+var updateSlide = function() {
+	let id = sessionStorage.getItem("slide_id");
 	let title = $('#title').val();
-	let pic = $('#pic').val();
-	let brief = $('#brief').val();
-	let description = $('#description').val();
+	let items = $('#items').val();
+	let background = $('#background').val();
 
 	let action = UPDATE_TABLE;
-	let tableName = "projects";
+	let tableName = "slides";
 	let queries = ["id=" + id];
-	let values = {title: title, pic: pic, brief: brief, description: description};
+	let values = {title: title, items: items, background: background};
 
 	$.post("../php/query.php", {action: action, table_name: tableName, queries: queries, values: values}, function(data) {
 		// Restore buttons to default state
@@ -96,11 +93,11 @@ var updateProject = function() {
 	});
 }
 
-var deleteProject = function() {
-	let id = sessionStorage.getItem("proj_id");
+var deleteSlide = function() {
+	let id = sessionStorage.getItem("slide_id");
 
 	let action = REMOVE_ROW;
-	let tableName = "projects";
+	let tableName = "slides";
 	let queries = ["id=" + id];
 
 	$.post("../php/query.php", {action: action, table_name: tableName, queries: queries}, function(data) {
@@ -109,18 +106,17 @@ var deleteProject = function() {
 	});
 }
 
-var addProject = function() {
+var addSlide = function() {
 	let title = $('#title').val();
-	let pic = $('#pic').val();
-	let brief = $('#brief').val();
-	let description = $('#description').val();
+	let items = $('#items').val();
+	let background = $('#background').val();
 
 	// First, check that all fields are filled
-	if (title && pic && brief && description) {
+	if (title && items && background) {
 		// Send an AJAX request
 		let action = ADD_ROW;
-		let tableName = "projects";
-		let values = {title: title, pic: pic, brief: brief, description: description};
+		let tableName = "slides";
+		let values = {title: title, items: items, background: background};
 		$.post("../php/query.php", {action: action, table_name: tableName, values: values}, function(data) {
 			alert(data);
 			resetForm();
@@ -132,9 +128,8 @@ var addProject = function() {
 function resetForm() {
 	// Clear text boxes
 	$('#title').val("");
-	$('#pic').val("");
-	$('#brief').val("");
-	$('#description').val("");
+	$('#items').val("");
+	$('#background').val("");
 	
 	// Show/Hide proper buttons
 	$('#submit_button').show();
