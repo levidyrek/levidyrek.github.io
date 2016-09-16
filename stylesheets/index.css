@@ -1,0 +1,143 @@
+.slide1 {
+	background-image: url("../images/mountainbackground.jpg");
+}
+
+.slide2 {
+	background-image: url("../images/townsight.jpg");
+}
+
+.slide3 {
+	background-image: url("../images/oceangreece.jpg");
+}
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 30vw;
+	margin-top: 30px;
+	margin-bottom: 30vw;
+	text-transform: capitalize;
+}
+
+.info {
+	font-family: 'Open Sans', sans-serif;
+	color: #303030;
+	background-color: rgba(237, 237, 237, .8);
+	text-align: center;
+	width: 50em; 
+	margin: 0 auto;
+	padding: 50px;
+	padding-bottom: 70px;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.info h2 {
+	font-size: 47px;
+	letter-spacing: 3px;
+	padding-bottom: 25px;
+	padding-top: 15px;
+}
+
+.info li {
+	font-size: 25px;
+	padding-bottom: 10px;
+}
+
+.info ul {
+	list-style-type: none;
+	padding-bottom: 10px;
+	text-align: left;
+	display: inline-block;
+}
+
+.info ul li:before {
+	content: '\2713';
+	display: inline-block;
+	color: #00CFCF;
+	padding: 0 6px 0 0;
+} 
+
+.slider-nav {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.slider-dots {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	z-index: 1;
+	position: relative;
+}
+
+.slider-dots li {
+	color: #bbbcbc;
+	font-size: 30px;
+	margin-right: 5px;
+	padding-right: 3px;
+	padding-left: 3px;
+	display: inline;
+}
+
+.slider-dots li.active-dot {
+	color: #363636;
+}
+
+.info, .slider-dots {
+	display: none; /* Don't display these for mobile. */
+}
+
+.col-centered a {
+	background-color: #1a52ff;
+	text-align: center;
+	margin: 0 auto;
+	float: none;
+	width: 45%;
+	padding: 10px;
+	margin-bottom: 50px;
+	font-size: 4vw;
+	color: white;
+	border-radius: 3px;
+}
+
+#about-me-button:hover {
+	text-decoration: none;
+	background-color: #3365ff;
+}
+
+@media(min-width:768px){
+	.slider-dots {
+		display: inline-block;
+	}
+
+	.info {
+		display: block;
+	}
+
+	.col-centered {
+		display: none;
+	}
+
+	.col-centered a {
+		font-size: 17px;
+	}
+
+	h1 {
+		margin-bottom: 125px;
+		margin-top: 80px;
+		font-size: 125px;
+	}
+}

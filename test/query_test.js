@@ -15,7 +15,7 @@ const REMOVE_ROW = 104;
 	@return	{Promise}	A Promise object
 **/
 function runTest(div, params, displayAsTable) {
-	return new Promise(function(resolve, reject) {
+	return Promise.resolve(
 		$.post("../php/query.php", params, function(data) {
 			
 			// Display result
@@ -35,8 +35,8 @@ function runTest(div, params, displayAsTable) {
 			}
 			else div.append($('<p>' + data + '</p>'));
 			
-		}).then(resolve, reject)
-	});
+		})
+	);
 }
 
 var promise = Promise.resolve();
