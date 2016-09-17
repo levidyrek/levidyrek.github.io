@@ -1,15 +1,3 @@
-.slide1 {
-	background-image: url("../images/mountainbackground.jpg");
-}
-
-.slide2 {
-	background-image: url("../images/townsight.jpg");
-}
-
-.slide3 {
-	background-image: url("../images/oceangreece.jpg");
-}
-
 .slide {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -24,9 +12,9 @@ h1 {
 	color: white;
 	text-align: center;
 	font-family: 'Exo 2', sans-serif;
-	font-size: 30vw;
-	margin-top: 30px;
-	margin-bottom: 30vw;
+	font-size: 25vw;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
 	text-transform: capitalize;
 }
 
@@ -35,32 +23,31 @@ h1 {
 	color: #303030;
 	background-color: rgba(237, 237, 237, .8);
 	text-align: center;
-	width: 50em; 
+	width: 60vh; 
 	margin: 0 auto;
-	padding: 50px;
-	padding-bottom: 70px;
+	padding-top: 6vh;
+	padding-bottom: 6vh;
 	border-radius: 3px;
-	position: absolute;
-	bottom: 10px;
 }
 
 .info h2 {
-	font-size: 47px;
+	font-size: 4vh;
 	letter-spacing: 3px;
-	padding-bottom: 25px;
-	padding-top: 15px;
+	padding-bottom: 3vh;
 }
 
 .info li {
-	font-size: 25px;
+	font-size: 2.5vh;
 	padding-bottom: 10px;
 }
 
 .info ul {
 	list-style-type: none;
-	padding-bottom: 10px;
 	text-align: left;
 	display: inline-block;
+	margin: auto;
+	padding-left: 0;
+	height: 100%;
 }
 
 .info ul li:before {
@@ -72,7 +59,7 @@ h1 {
 
 .slider-nav {
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 1vh;
 }
 
 .slider-dots {
@@ -85,7 +72,7 @@ h1 {
 
 .slider-dots li {
 	color: #bbbcbc;
-	font-size: 30px;
+	font-size: 3vh;
 	margin-right: 5px;
 	padding-right: 3px;
 	padding-left: 3px;
@@ -136,8 +123,8 @@ h1 {
 	}
 
 	h1 {
-		margin-bottom: 125px;
-		margin-top: 80px;
-		font-size: 125px;
+		margin-bottom: 10vh;
+		margin-top: 10vh;
+		font-size: 15vh;
 	}
 }

@@ -2,13 +2,16 @@ Programmer
 10+ Languages
 Multiple Frameworks
 Data Structures
+images/mountainbackground.jpg
 
 Developer
 Git Workflow
 Agile Methodologies
 Team Player
+images/townsight.jpg
 
 Creator
 Mobile Development
 Web Development
 Photoshop, Blender
+images/oceangreece.jpg
