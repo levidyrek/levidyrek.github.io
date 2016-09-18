@@ -1,155 +1,29 @@
-/* Main CSS file that all html files use as a basic layout */
-
-html {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background-color: #e6e6e6;
-	font-family: 'Quicksand', sans-serif;
-	color: #202020;
+html, body {
 	padding: 0;
 	margin: 0;
-}
-
-.container-fluid {
-	font-family: 'Quicksand', sans-serif;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-h1, h2, h3 {
-	text-transform: uppercase;
-	font-weight: bold;
 }
 
 .navbar {
-	background-color: white;
+	font-family: 'Open Sans', sans-serif;
 	margin: 0;
-	padding: 0;
-	border-style: none;
-	border-radius: 0;
-	box-sizing: border-box;
-	text-align: center;
-	min-height: 0;
-	height: 50px;
 }
 
-nav ul {
-	display: inline-block;
-	text-align: center;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-#menu-button {
-	display: none;
-}
-
-.navbar li {
-	display: inline;
-	height: 100%;
-}
-
-.navbar a {
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 14px;
-	color: black;
-	height: 100%;
-	width: 100%;
-}
-
-.navbar li:hover {
-	text-decoration: none;
-	background-color: #F1F1F1;
-	border-bottom: solid #F1F1F1 4px;
-}
-
-.dropdown-menu li {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.dropdown-menu {
-	border-radius: 0;
-	margin: 0px;
-	padding: 0px;
+.navbar-collapse {
 	background-color: white;
-	box-shadow: none;
-	top: 53px;
-	border: none !important;
 }
 
-.dropdown-menu a {
-	font-size: 18px;
-	text-transform: capitalize;
+.nav a {
+	color: black !important;
 }
 
-.dropdown {
-	box-sizing: border-box;
+.nav li:hover {
+	background-color: #F8F8F8;
 }
 
-#current-page {
-	border-bottom: solid #191919 4px;
+.navbar-brand {
+	padding-top: 8px;
 }
 
-#current-page:hover {
-	border-bottom: solid #191919 4px;
-}
-
-.menu > li {
-	display: none;
-}
-
-#menu-button {
-	display: inline !important;
-}
-
-.dropdown img {
-	vertical-align: center;
-	margin-right: 10px;
-}
-
-#logo {
-	display: none;
-}
-
-.menu {
-	padding: 0 !important;
-}
-
-.container-fluid {
-	padding: 0 !important;
-}
-
-.navbar {
-	padding-left: 0 !important;
-}
-
-/* ------------------- Desktop Styling ------------------- */
-
-@media(min-width:992px){
-	#logo {
-		margin: 0;
-		vertical-align: middle;
-		display: inline;
-		padding-left: 20px;
-		padding-right: 40px;
-	}
-	
-	.menu > li {
-		display: inline;
-	}
-
-	#menu-button {
-		display: none !important;
-	}
-	
-	.navbar {
-		text-align: initial;
-	}
+.projects-menu {
+	padding: 0;
 }

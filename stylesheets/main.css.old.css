@@ -1,0 +1,153 @@
+/* Main CSS file that all html files use as a basic layout */
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+/*body {
+	background-color: #e6e6e6;
+	font-family: 'Quicksand', sans-serif;
+	color: #202020;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+}
+
+.navbar {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	text-align: center;
+	min-height: 0;
+}
+
+nav ul {
+	display: inline-block;
+	text-align: center;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	white-space: nowrap;
+}
+
+.menu td, .menu a {
+	height: 100%;
+}
+
+#menu-button {
+	display: none;
+}
+
+.navbar li {
+	display: inline;
+}
+
+.navbar a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	color: black;
+	height: 100%;
+	width: 100%;
+}
+
+.navbar li:hover {
+	text-decoration: none;
+	background-color: #F1F1F1;
+	border-bottom: solid #F1F1F1 4px;
+}
+
+.dropdown-menu li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	box-shadow: none;
+	top: 53px;
+	border: none !important;
+}
+
+.dropdown-menu a {
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+.dropdown {
+	box-sizing: border-box;
+}
+
+#current-page {
+	border-bottom: solid #191919 4px;
+}
+
+#current-page:hover {
+	border-bottom: solid #191919 4px;
+}
+
+.menu > li {
+	display: none;
+}
+
+#menu-button {
+	display: inline !important;
+}
+
+.dropdown img {
+	vertical-align: center;
+	margin-right: 10px;
+}
+
+#logo {
+	display: none;
+}
+
+.menu {
+	padding: 0 !important;
+}
+
+.container-fluid {
+	padding: 0 !important;
+}
+
+.navbar {
+	padding-left: 0 !important;
+}*/
+
+/* ------------------- Desktop Styling ------------------- */
+
+/*@media(min-width:992px){
+	#logo {
+		margin: auto;
+		vertical-align: middle;
+		display: inline;
+		padding-left: 20px;
+		padding-right: 40px;
+	}
+	
+	.menu > li {
+		display: inline;
+	}
+
+	#menu-button {
+		display: none !important;
+	}
+	
+	.navbar {
+		text-align: initial;
+	}
+}*/

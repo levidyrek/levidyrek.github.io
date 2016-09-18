@@ -32,8 +32,9 @@ h1 {
 
 .info h2 {
 	font-size: 4vh;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	padding-bottom: 3vh;
+	text-transform: uppercase;
 }
 
 .info li {

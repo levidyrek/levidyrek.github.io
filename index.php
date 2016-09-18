@@ -2,21 +2,17 @@
 
 <html>
   <head>
-	<?php include "php/head.php"; ?>
-	
-    <link href="stylesheets/main.css" rel="stylesheet" >
+  	<?php include "php/head.php"; ?>
+
+		<link href="stylesheets/main.css" rel="stylesheet" >
     <link href="stylesheets/index.css" rel="stylesheet" >
 	
     <title>Homepage - Levi Payne</title>
   </head>
   <body>
-		<?php
-			include_once("php/constants.php");
-			$page = HOME_PAGE;
-			include "php/navbar.php";
-		?>
+		<div id="nav-container"></div>
 		<div class="slide-container">
-			<div class="slide container">
+			<div class="slide container-fluid">
 				<h1>Levi Payne</h1>
 				<div class="row-fluid">
 					<div class="col-md-12 col-centered">
@@ -36,6 +32,7 @@
 		<!--Scripts-->
 		<script src="jquery-1.11.3.js"></script>
 		<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+		<script src="js/navbar.js"></script>
 		<script src="js/index.js"></script>
 		 <!-- Google Analytics -->
 		<script>

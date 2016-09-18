@@ -65,8 +65,8 @@
 			
 			// Add the values to be set to the query
 			$q .= " SET ";
-			addQuotesToStrings($values);
 			escapeApostrophes($values);
+			addQuotesToStrings($values);
 			addItemsToQuery($q, $values, true);
 			
 			// Add the WHERE clause at the end of the query
@@ -124,8 +124,8 @@
 			
 			// Add the values
 			$q .= "VALUES (";
-			addQuotesToStrings($values);
 			escapeApostrophes($values);
+			addQuotesToStrings($values);
 			addItemsToQuery($q, $values, false);
 			$q .= ")";
 			
@@ -194,7 +194,7 @@
 
 	function escapeApostrophes(&$values) {
 		foreach ($values as &$value) {
-			str_replace("'", "''", $value);
+			$value = str_replace("'", "''", $value);
 		}
 	}
 ?>

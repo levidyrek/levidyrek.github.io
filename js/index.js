@@ -1,9 +1,3 @@
-// query.php actions
-const UPDATE_TABLE = 101;
-const SELECT_TABLE = 102;
-const ADD_ROW = 103;
-const REMOVE_ROW = 104;
-
 var slides;
 var slideIndex = 0;
 
@@ -56,7 +50,7 @@ var handleSlideChange = function() {
 }
 
 /**
-	Loads slide data upon loading of the page. Also sets up slider 
+	Loads slide data upon loading of the page. Also sets up slider dots
 **/
 function retrieveSlides() {
 	let tableName = "slides";
@@ -85,7 +79,6 @@ function retrieveSlides() {
 	This is for aesthetic purposes, so that fading out slides looks right.
 **/
 function changeToSlide(i) {
-	console.log("Slide being change");
 
 	let slideData = slides[i];
 	let current = $('.slide');
@@ -106,7 +99,6 @@ function changeToSlide(i) {
 	
 	
 	current.fadeOut(600, function() {
-		console.log("Fade out finished");
 		current.remove();
 
 		// Handle slide change
