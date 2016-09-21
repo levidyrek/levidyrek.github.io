@@ -26,6 +26,9 @@ var onNavbarLoaded = function () {
 	// Make project dropdown appear on mouseover
 	$('.nav .projects-button').mouseover(function() { $(this).find('ul').show(); });
 	$('.nav .projects-button').mouseout(function() { $(this).find('ul').hide(); });
+
+	// Keep dropdown from being visible by default
+	$('.projects-menu').hide();
 }
 
 function setActivePage() {

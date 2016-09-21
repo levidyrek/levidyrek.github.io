@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-
 <html>
   <head>
   	<?php include "php/head.php"; ?>
-
-		<link href="stylesheets/main.css" rel="stylesheet" >
     <link href="stylesheets/index.css" rel="stylesheet" >
 	
     <title>Homepage - Levi Payne</title>

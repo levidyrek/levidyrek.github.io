@@ -4,31 +4,27 @@
 
 .main li, .main p {
 	font-weight: lighter;
-	font-size: 6vw;
 	color: #303030;
+	font-size: 18px;
 }
 
 h2 {
-	font-size: 10vw;
+	font-size: 26px;
 }
 
 h3 {
-	font-size: 9vw;
+	font-size: 24px;
 }
 
 h4 {
-	font-size: 8vw;
+	font-size: 22px;
 	font-family: 'Exo 2', sans-serif;
 	font-weight: lighter !important;
 	text-transform: capitalize !important;
 }
 
 h5 {
-	font-size: 7vw;
-}
-
-.navbar {
-	margin-bottom: 0px;
+	font-size: 20px;
 }
 
 .main {
@@ -38,54 +34,46 @@ h5 {
 
 #self {
 	display: block;
-	background-color: #303030;
 	vertical-align: center;
-	margin-left: auto;
-  margin-right: auto;
-	padding: 5px;
-	margin-bottom: 20px;
 	border-radius: 3px;
-	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 .education {
-  background-color: white;
-  padding-left: 20px;
-  padding-bottom: 10px;
+	background-color: white;
+	padding-left: 20px;
+	padding-bottom: 10px;
 	padding-top: 10px;
 	padding-right: 20px;
 }
 
 .education h3 {
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 	font-family: 'Exo 2', sans-serif;
 	font-weight: lighter !important;
 	text-transform: capitalize !important;
- } 
- 
- .education h5 {
-	 font-family: 'Exo 2', sans-serif;
- }
- 
- .education ul {
+} 
+
+.education h5 {
+	font-family: 'Exo 2', sans-serif;
+}
+
+.education ul {
 	list-style-type: none;
- }
+}
 
 .bio {
-  background-color: LightCyan;
+	background-color: LightCyan;
 	padding-left: 20px;
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 	padding-top: 10px;
 	padding-right: 20px;
 }
 
 .skills {
-    text-indent: 0px;
+	text-indent: 0px;
 	padding-bottom: 20px;
-}
-
-.skills>div {
-	margin: 20px;
 }
 
 .center-list {
@@ -93,49 +81,37 @@ h5 {
 	margin: auto;
 }
 
-.skills h2 {
+#skills-header {
 	font-family: 'Exo 2', sans-serif;
-    text-transform: capitalize;
-    text-align: center;
-    padding-top: 20px;
-	font-size: 35px;
+	text-transform: capitalize;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	font-weight: lighter;
 	background-color: white;
+	margin: 0;
 }
 
 .skills h3 {
 	font-family: 'Exo 2', sans-serif;
-  text-align: center;
-  text-indent: 0 !important;
+	text-align: center;
 	padding-bottom: 5px;
 }
 
 .skills h4 {
-    text-transform: capitalize !important;
+	text-transform: capitalize !important;
 }
 
 .soft-dev {
-    background-color: white;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-top: 1px;
-		padding-right: 20px;
+	background-color: white;
 }
 
 .misc, .languages {
-    background-color: LightCyan;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-top: 1px;
-		padding-right: 20px;
-}
-
-.skills h2 {
-    padding-bottom: 20px;
+	background-color: LightCyan;
 }
 
 .skills ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .languages hr, .misc hr {
@@ -143,7 +119,8 @@ h5 {
 }
 
 .languages, .soft-dev, .misc {
-	margin-top: 10px;
+	margin: 10px 0;
+	padding: 1px 30px 5px 30px;
 }
 
 div {
@@ -153,11 +130,11 @@ div {
 /* ------------------- Desktop Styling ------------------- */
 
 @media(min-width:768px){
-	#self {
-		margin-top: 75px;
+	#skills-header {
+
 	}
-		
-	.main li, .main p {
+
+	/*.main li, .main p {
 		font-size: 18px;
 	}
 
@@ -178,5 +155,5 @@ div {
 
 	h5 {
 		font-size: 20px;
+		}*/
 	}
-}

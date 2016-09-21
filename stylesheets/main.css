@@ -3,9 +3,18 @@ html, body {
 	margin: 0;
 }
 
+body {
+	background-color: #e7e7e7;
+}
+
 .navbar {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
+	border: none;
+}
+
+.navbar .container-fluid {
+	background: white;
 }
 
 .navbar-collapse {
@@ -22,8 +31,18 @@ html, body {
 
 .navbar-brand {
 	padding-top: 8px;
+	margin-left: 0 !important;
 }
 
 .projects-menu {
 	padding: 0;
+	border: none;
+	display: none;
+}
+
+@media(min-width:768px) {
+
+	.navbar .projects-menu {
+		display: inline-block;
+	}
 }
