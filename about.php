@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="education">
-					<h4>Education</h4>
+					<h3>Education</h3>
 					<h5><b>University of Virginia (2014-2016)</b></h5>
 					<ul>
 						<li>Bachelor of Arts in Computer Science</li>

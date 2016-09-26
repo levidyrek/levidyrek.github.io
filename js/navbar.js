@@ -35,6 +35,7 @@ function setActivePage() {
 	let path = window.location.pathname;
 	let page = path.split("/").pop();
 	console.log(page);
+	if (page == "") page = "index.php";
 	$('a[href="' + page + '"]').parent().addClass("active");
 }
 

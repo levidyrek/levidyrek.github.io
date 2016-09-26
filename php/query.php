@@ -42,7 +42,7 @@
 	if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 	
 	// Action must be set
-	checkPOST("action") or die("Error: POST variable 'action' must be setand not empty.");
+	checkPOST("action") or die("Error: POST variable 'action' must be set and not empty.");
 	$action = $_POST["action"];
 
 	// Table name must be given for all actions
