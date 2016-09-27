@@ -9,7 +9,7 @@
 
 	// Create database
 	$db_name = "personal_website";
-	$q = 'CREATE DATABASE IF NOT EXISTS $db_name';
+	$q = "CREATE DATABASE IF NOT EXISTS " . $db_name;
 	$conn->query($q) or die("Failed to create database: " . $conn->error);
 	echo "Database has been created.\n";
 

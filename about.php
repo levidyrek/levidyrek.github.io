@@ -10,40 +10,38 @@
 	<div id="nav-container"></div>
 	<div class="main container-fluid">
 		<div class="row">
-			<div class="col-md-3 col-sm-offset-1 self-container">
+			<div class="col-md-4 col-sm-offset-4 self-container">
 				<img id="self" src="images/self.jpeg" alt="self-portrait">
 			</div>	
-				<div class="col-md-4">
-					<div class="row">
-						<div class="bio">
-							<h3>bio <span class="bracket">{</span></h3>
-							<div class="indent-1">
-								<p>Hi! I'm a recent Computer Science graduate from the University of Virginia. I am very passionate about technology and software development, and I am very enthusiastic about what I do.</p>
-							</div>
-							<h3 class="bracket">}</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="education">
-							<h3>education <span class="bracket">{</span></h3>
-							<div class="indent-1">
-								<h5>University of Virginia (2014-2016)</h5>
-								<ul>
-									<li>B.A. in Computer Science</li>
-									<li>GPA: 3.665</li>
-									<li>Major GPA: 3.883</li>
-								</ul>
-								<h5>Wytheville Community College (2013-2014)</h5>
-								<ul>
-									<li>A.A.S. in General Studies</li>
-									<li>Member of Phi Theta Kappa</li>
-									<li>GPA: 3.8</li>
-								</ul>
-							</div>
-							<h3 class="bracket">}</h3>
-						</div>
-					</div>
+		</div>
+		<div class="row">
+			<div class="bio col-md-6 col-md-offset-3">
+				<h3>bio <span class="bracket">{</span></h3>
+				<div class="indent-1">
+					<p>Hi! I'm a recent Computer Science graduate from the University of Virginia. I am very passionate about technology and software development, and I am very enthusiastic about what I do.</p>
 				</div>
+				<h3 class="bracket">}</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="education col-md-6 col-md-offset-3">
+				<h3>education <span class="bracket">{</span></h3>
+				<div class="indent-1">
+					<h5>University of Virginia (2014-2016)</h5>
+					<ul>
+						<li>B.A. in Computer Science</li>
+						<li>GPA: 3.665</li>
+						<li>Major GPA: 3.883</li>
+					</ul>
+					<h5>Wytheville Community College (2013-2014)</h5>
+					<ul>
+						<li>A.A.S. in General Studies</li>
+						<li>Member of Phi Theta Kappa</li>
+						<li>GPA: 3.8</li>
+					</ul>
+				</div>
+				<h3 class="bracket">}</h3>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
@@ -137,13 +135,13 @@
 	<script src="js/about.js"></script>
 	<!-- Google Analytics -->
 	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-63481408-1', 'auto');
-	ga('send', 'pageview');
+		ga('create', 'UA-63481408-1', 'auto');
+		ga('send', 'pageview');
 
 	</script>
 
