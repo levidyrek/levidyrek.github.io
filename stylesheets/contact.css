@@ -1,33 +1,19 @@
 .contact-main {
   background-color: white;
-  color: #303030;
-	padding: 10px 15px 2px 15px;
-	margin: 0 10px 0 10px;
 	font-size: 18px;
 	border-radius: 0px 0px 3px 3px;
+	padding: 20px;
 	word-wrap: break-word;
 }
 
-.contact-main a {
-  color: #00CCCC;
+.main {
+	margin: 40px 10px 0 10px;
 }
 
-.contact-main a:hover {
-  color: cyan;
-  text-decoration: none;
+h3 {
+	margin-top: 0;
 }
 
-.header {
-	background-color: LightCyan;
-	margin: 50px 10px 0 10px;
-	padding: 10px;
-	font-family: 'Exo 2', sans-serif;
-	padding-left: 20px;
-	border-radius: 3px 3px 0px 0px;
-}
-
-.header h2 {
-	margin: 0px !important;
-	text-transform: Capitalize;
-	font-weight: lighter;
+address {
+	margin: 0;
 }
