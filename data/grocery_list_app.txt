@@ -1,6 +1,6 @@
 Grocery List Android App
 
-/images/grocery-list-screenshot.png
+images/grocery-list-screenshot.png
 
 Status: Complete
 Languages: Java, XML

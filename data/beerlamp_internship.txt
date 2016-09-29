@@ -1,6 +1,6 @@
 BeerLamp Internship
 
-/images/beerlamp-logo.png
+images/beerlamp-logo.png
 
 Status: Complete
 Languages: Java, XML

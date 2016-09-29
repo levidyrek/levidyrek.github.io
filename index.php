@@ -30,6 +30,7 @@
 		<script src="jquery-1.11.3.js"></script>
 		<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 		<script src="js/navbar.js"></script>
+		<script src="js/main.js"></script>
 		<script src="js/index.js"></script>
 		 <!-- Google Analytics -->
 		<script>

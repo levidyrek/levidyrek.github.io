@@ -26,6 +26,7 @@
 
 	<!--Scripts-->
 	<script src="js/navbar.js"></script>
+	<script src="js/main.js"></script>
 	<script src="js/contact.js"></script>
 	<!-- Google Analytics -->
 	<script>

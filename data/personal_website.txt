@@ -1,6 +1,6 @@
 Personal Website
 
-/images/frontpage-screenshot.jpg
+images/frontpage-screenshot.jpg
 
 Status: ongoing
 Languages: HTML, CSS, Javascript, PHP

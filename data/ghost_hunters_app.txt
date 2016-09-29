@@ -1,6 +1,6 @@
 Ghost Hunters Android App
 
-/images/gh-screenshot.jpg
+images/gh-screenshot.jpg
 
 Status: Complete
 Languages: Java, XML

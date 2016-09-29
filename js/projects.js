@@ -1,21 +1,36 @@
 var main = function() {
-	
-	// Hide or show elements at first
-	$('.projects-menu').hide();
-	$('.main-menu').hide();
-	
-	// Allows dropdown menu for projects to appear when button is hovered
-	$('.projects-button').mouseover(function() {
-		$('.projects-menu').show();
-	});
-	$('.projects-button').mouseout(function() {
-		$('.projects-menu').hide();
-	});
-	
-	// Allows main dropdown menu to be shown when menu button is visible (on mobile only)
-	$('#menu-a').click(function() {
-		$('.main-menu').toggle();
-	});
+	loadProjects();
+}
+
+function loadProjects() {
+	// Retrieve projects from db
+	let action = SELECT_TABLE;
+	let tableName = "projects";
+	let columns = ["id", "title", "pic"];
+	$.post("php/query.php", {action: action, table_name: tableName, columns: columns}, makeThumbnails);
+}
+
+var makeThumbnails = function(data) {
+	if (data) {
+
+		let table = JSON.parse(data);
+		for (let key in table) {
+			let id = table[key].id;
+			let title = table[key].title;
+			let pic = table[key].pic;
+
+			// Load template
+			$.get("templates/project-thumbnail.html", function(data) {
+				let thumbnail = $(data);
+				thumbnail.find('#link').attr("href", "#"); // TODO: Update link when possible
+				thumbnail.find('#pic').attr("src", pic);
+				thumbnail.find('#title').text(title);
+
+				$('.proj-container').append(thumbnail);
+			});
+		}
+
+	}
 }
 
 $(document).ready(main);
