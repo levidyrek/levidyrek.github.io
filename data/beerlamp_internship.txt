@@ -5,7 +5,7 @@ images/beerlamp-logo.png
 Status: Complete
 Languages: Java, XML
 Frameworks/APIs: Android Framework
-Google Play Store Link: <a href="https://play.google.com/store/apps/details?id=com.beerlamp" target="_blank">BeerLamp</a><br>
+Google Play Store Link: <a href="https://play.google.com/store/apps/details?id=com.beerlamp" target="_blank">BeerLamp</a>
 Website: <a href="https://beerlamp.co/" target="_blank">beerlamp.co</a>
 
 I joined BeerLamp, a small startup based in Charlottesville, VA in October 2015. They brought me on to help get the Android

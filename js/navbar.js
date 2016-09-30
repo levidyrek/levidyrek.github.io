@@ -50,7 +50,7 @@ function fillProjectDropdown() {
 			let parsed = JSON.parse(data);
 			for (let key in parsed) {
 				let row = parsed[key];
-				$('.nav .projects-menu').append($('<li><a href="#">' + row.title + "</a></li>"));
+				$('.nav .projects-menu').append($('<li><a href="project-page.php?id=' + row.id + '">' + row.title + "</a></li>"));
 			}
 		}
 	});

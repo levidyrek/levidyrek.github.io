@@ -18,15 +18,17 @@ var makeThumbnails = function(data) {
 			let id = table[key].id;
 			let title = table[key].title;
 			let pic = table[key].pic;
+			let container = $('<div></div>');
+			$('.proj-container').append(container);
 
 			// Load template
 			$.get("templates/project-thumbnail.html", function(data) {
 				let thumbnail = $(data);
-				thumbnail.find('#link').attr("href", "#"); // TODO: Update link when possible
+				thumbnail.find('#link').attr("href", "project-page.php?id=" + id); // TODO: Update link when possible
 				thumbnail.find('#pic').attr("src", pic);
 				thumbnail.find('#title').text(title);
 
-				$('.proj-container').append(thumbnail);
+				container.append(thumbnail);
 			});
 		}
 
