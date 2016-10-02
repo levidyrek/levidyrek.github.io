@@ -7,13 +7,15 @@
     <title>Homepage - Levi Payne</title>
   </head>
   <body>
-		<div id="nav-container"></div>
+		<div id="nav-container">
+			<?php include "php/navbar.php"; ?>
+		</div>
 		<div class="slide-container">
 			<div class="slide container-fluid">
 				<h1>Levi Payne</h1>
 				<div class="row-fluid">
 					<div class="col-md-12 col-centered">
-						<a id="about-me-button" class="center-block" href="about.html">About Me</a>
+						<a id="about-me-button" class="center-block" href="about.php">About Me</a>
 					</div>
 				</div>
 				<div class="info">
@@ -27,8 +29,6 @@
 		</div>
 		
 		<!--Scripts-->
-		<script src="jquery-1.11.3.js"></script>
-		<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 		<script src="js/navbar.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/index.js"></script>

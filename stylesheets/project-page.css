@@ -75,3 +75,12 @@ p {
 .description h4 {
 	padding-top: 10px;
 }
+
+/* Very small screens */
+@media(max-width:375px) {
+
+	img {
+		width: 95%;
+	}
+
+}

@@ -9,7 +9,9 @@
 </head>
 
 <body>
-	<div id="nav-container"></div>
+	<div id="nav-container">
+		<?php include "php/navbar.php"; ?>
+	</div>
 	<div class="main container-fluid">
 		<h2 id="title"></h2>
 		<div class="row">

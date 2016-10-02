@@ -31,7 +31,7 @@
 			
 	**/
 	
-	include "constants.php";
+	include_once "constants.php";
 	
 	$server = "localhost";
 	$username = "root";
@@ -75,7 +75,7 @@
 			
 			// Now ready to send off the query to the db and report success or failure
 			$conn->query($q) or die("Query '" . $q . "' failed: " . $conn->error);
-			echo "Successfully updated " . $conn->affected_rows . " rows.";
+			return "Successfully updated " . $conn->affected_rows . " rows.";
 			
 			break;
 		case SELECT_TABLE:
@@ -106,7 +106,7 @@
 				while ($row = $result->fetch_assoc()) {
 					$output[] = $row;
 				}
-				echo json_encode($output);
+				return json_encode($output);
 			}
 			
 			break;
@@ -131,7 +131,7 @@
 			
 			// Run the query
 			$conn->query($q) or die("Query '" . $q . "' failed: " . $conn->error);
-			echo "Query was successful.";
+			return "Query was successful.";
 
 			break;
 		case REMOVE_ROW:
@@ -147,7 +147,7 @@
 			
 			// Run query
 			$conn->query($q) or die("Query '" . $q . "' failed: " . $conn->error);
-			echo "Query affected " . $conn->affected_rows . " rows.";
+			return "Query affected " . $conn->affected_rows . " rows.";
 			
 			break;
 		default:

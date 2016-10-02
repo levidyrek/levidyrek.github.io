@@ -38,9 +38,7 @@ var handleSlideChange = function() {
 	Loads slide data upon loading of the page. Also sets up slider dots
 **/
 function retrieveSlides() {
-	let tableName = "slides";
-	let action = SELECT_TABLE;
-	$.post("php/query.php", {action: action, table_name: tableName}, function(data) {
+	$.get("php/get_slides.php", function(data) {
 		if (data) {
 			slides = JSON.parse(data);
 

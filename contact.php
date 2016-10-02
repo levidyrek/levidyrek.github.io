@@ -7,7 +7,9 @@
 	<title>Contact Me - Levi Payne</title>
 </head>
 <body>
-	<div id="nav-container"></div>
+	<div id="nav-container">
+		<?php include "php/navbar.php"; ?>
+	</div>
 	<div class="main container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">

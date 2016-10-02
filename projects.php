@@ -8,42 +8,11 @@
 </head>
 
 <body>
-	<div id="nav-container"></div>
+	<div id="nav-container">
+		<?php include "php/navbar.php"; ?>
+	</div>
 	<div class="main container">
-		<div class="row proj-container">
-			<!-- <div class="col-md-4 proj-col">
-				<div class="project">
-					<a href="MyProjects/pweb-project.html">
-						<img src="images/frontpage-screenshot.jpg">
-						<h4>Personal Website</h4>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4 proj-col">
-				<div class="project">
-					<a href="MyProjects/ghost-project.html">
-						<img src="images/gh-screenshot.jpg">
-						<h4>Ghost Hunters App</h4>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4 proj-col">
-				<div class="project">
-					<a href="MyProjects/grocery-list-app.html">
-						<img src="images/grocery-list-tile.png">
-						<h4>Grocery List App</h4>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4 proj-col">
-				<div class="project">
-					<a href="MyProjects/beerlamp.html">
-						<img src="images/beerlamp-logo.png">
-						<h4>BeerLamp Internship</h4>
-					</a>
-				</div>
-			</div>  -->
-		</div>
+		<div class="row proj-container"></div>
 	</div>
 
 	<!--Scripts-->

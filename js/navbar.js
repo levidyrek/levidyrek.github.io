@@ -14,21 +14,27 @@ const ADD_ROW = 103;
 const REMOVE_ROW = 104;
 
 var main = function () {
-	// Insert template into document. 
-	$('#nav-container').load('templates/navbar.html', onNavbarLoaded);
-
+	onNavbarLoaded();
 }
 
 var onNavbarLoaded = function () {
 	setActivePage();
 	fillProjectDropdown();
 
-	// Make project dropdown appear on mouseover
-	$('.nav .projects-button').mouseover(function() { $(this).find('ul').show(); });
-	$('.nav .projects-button').mouseout(function() { $(this).find('ul').hide(); });
-
 	// Keep dropdown from being visible by default
 	$('.projects-menu').hide();
+	$('.main-menu').hide();	
+
+	// // Make project dropdown appear on mouseover
+	$('.nav .projects-button').mouseover(function() { 
+		if ($(window).width() >= 768) $(this).find('ul').show(); 
+	});
+	$('.nav .projects-button').mouseout(function() { $(this).find('ul').hide(); });
+
+	// Allow main dropdown menu to be shown when menu button is visible (on mobile only)
+	$('#menu-a').click(function() {
+		$('.main-menu').toggle();
+	});
 }
 
 function setActivePage() {
@@ -42,10 +48,7 @@ function setActivePage() {
 
 function fillProjectDropdown() {
 	// First, load projects from db
-	let action = SELECT_TABLE;
-	let tableName = "projects";
-	let columns = ["id", "title"];
-	$.post("php/query.php", {action: action, table_name: tableName, columns: columns}, function(data) {
+	$.get("php/get_projects.php", function(data) {
 		if (data) {
 			let parsed = JSON.parse(data);
 			for (let key in parsed) {

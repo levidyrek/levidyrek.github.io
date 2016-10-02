@@ -10,10 +10,7 @@ var main = function() {
 Gets data for selected project and passes it to fillInData()
 **/
 function loadProject(id) {
-	let action = SELECT_TABLE;
-	let tableName = "projects";
-	let queries = ["id=" + id];
-	$.post("php/query.php", {action: action, table_name: tableName, queries: queries}, fillInData);
+	$.get("php/get_project_by_id.php", {id: id}, fillInData);
 }
 
 /**
