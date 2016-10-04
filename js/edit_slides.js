@@ -19,14 +19,11 @@ var main = function() {
 
 function setupSelect() {
 	// Retrieve slides from db
-	var action = SELECT_TABLE;
-	var tableName = "slides";
-	var columns = ["id", "title"];
 	
 	let select = $('#slide_select');
 	select.empty();
 
-	$.post("../php/query.php", {action: action, table_name: tableName, columns: columns}, function(data) {
+	$.get("../php/get_slides.php", function(data) {
 		if (data) {
 			let table = JSON.parse(data);
 			for (let key in table) {
@@ -45,11 +42,8 @@ function setupSelect() {
 var loadSlide = function() {
 	// Submit an AJAX request for the specified row
 	let id = $('select').val();
-	let action = SELECT_TABLE;
-	let tableName = "slides";
-	let queries = ["id=" + id];
 
-	$.post("../php/query.php", {action: action, table_name: tableName, queries: queries}, function(data) {
+	$.get("../php/get_slide_by_id.php", {id: id}, function(data) {
 		if (data) {
 			let table = JSON.parse(data);
 			let slide = table[0];
