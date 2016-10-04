@@ -20,7 +20,13 @@
 			<div class="col-md-10 col-md-offset-1">
 				<div class="bio">
 					<h3>Bio</h3>
-					<p>Hi! I'm a recent Computer Science graduate from the University of Virginia. I am very passionate about technology and software development, and I am very enthusiastic about what I do.</p>
+					<p>
+						Hi! I'm a Computer Science graduate from the University of Virginia. I am very passionate about technology and software development.
+						I have experience in several areas of development, including front-end and back-end on web and mobile. I'm disciplined enough to work 
+						independently but thrive just as well in a team environment as I have both in University and in my internship experience. In my free
+						time, I enjoy playing video games, playing guitar, working on personal projects (such as this website), and tinkering with some new 
+						piece of technology or software.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -30,13 +36,13 @@
 					<h3>Education</h3>
 					<h5>University of Virginia (2014-2016)</h5>
 					<ul>
-						<li>Bachelor of Arts in Computer Science</li>
-						<li>GPA: 3.665</li>
-						<li>Major GPA: 3.883</li>
+						<li>B.A. in Computer Science</li>
+						<li>GPA: 3.6</li>
+						<li>Major GPA: 3.8</li>
 					</ul>
 					<h5>Wytheville Community College (2013-2014)</h5>
 					<ul>
-						<li>Associate of Arts and Sciences in General Studies</li>
+						<li>A.A.S. in General Studies</li>
 						<li>Member of Phi Theta Kappa</li>
 						<li>GPA: 3.8</li>
 					</ul>
@@ -65,11 +71,11 @@
 							<li>HTML</li>
 							<li>CSS</li>
 							<li>XML</li>
+							<li>Python</li>
 						</ul>
 						<h4>Competent</h4>
 						<ul>
 							<li>C</li>
-							<li>Python</li>
 							<li>x86 Assembly</li>
 							<li>Swift</li>
 						</ul>

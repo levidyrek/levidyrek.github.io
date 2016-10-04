@@ -19,14 +19,11 @@ var main = function() {
 
 function setupSelect() {
 	// Retrieve projects from db
-	var action = SELECT_TABLE;
-	var tableName = "projects";
-	var columns = ["id", "title"];
 	
 	let select = $('#proj_select');
 	select.empty();
 
-	$.post("../php/query.php", {action: action, table_name: tableName, columns: columns}, function(data) {
+	$.get("../php/get_projects.php", function(data) {
 		if (data) {
 			
 			let table = JSON.parse(data);
@@ -46,11 +43,8 @@ function setupSelect() {
 var loadProject = function() {
 	// Submit an AJAX request for the specified row
 	let id = $('select').val();
-	let action = SELECT_TABLE;
-	let tableName = "projects";
-	let queries = ["id=" + id];
 
-	$.post("../php/query.php", {action: action, table_name: tableName, queries: queries}, function(data) {
+	$.get("../php/get_project_by_id.php", {id: id}, function(data) {
 		if (data) {
 			let table = JSON.parse(data);
 			let project = table[0];
