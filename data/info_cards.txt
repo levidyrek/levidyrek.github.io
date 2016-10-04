@@ -1,7 +1,7 @@
 Programmer
 10+ Languages
 Multiple Frameworks
-Data Structures
+Advanced Data Structures
 images/mountainbackground.jpg
 
 Developer
