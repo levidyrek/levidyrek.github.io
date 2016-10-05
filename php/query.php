@@ -108,6 +108,7 @@
 				}
 				return json_encode($output);
 			}
+			else return "Query: '" . $q . "' returned no results.";
 			
 			break;
 		case ADD_ROW:
