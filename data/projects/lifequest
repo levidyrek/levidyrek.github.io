@@ -1,6 +1,6 @@
 LifeQuest
 
-images/lifequest-screenshot.png
+images/lifequest-icon.png
 
 Status: Ongoing
 Languages: Java, XML
@@ -8,5 +8,5 @@ Frameworks/APIs: Android, Firebase
 Google Play: <a href="https://play.google.com/store/apps/details?id=com.levipayne.liferpg">LifeQuest</a>
 
 LifeQuest is an Android app I developed as a personal side project. After thinking about how I could give myself more motivation to do tasks I needed to do, I came up with the idea for this app. Basically, it works by using a gamified goal and reward system. The user has a level, quests, and rewards. The user defines their own quests, which upon completion will give them experience points and coins to spend on rewards, which are also user-defined. The user can also fail quests, which will cause a loss of health points, the quantity of which is determined on the difficulty of the quest; the easier the quest, the more health points you lose, and vice versa. This can eventually lead to in-game death if the user fails too many quests, which will reset the user's level. The object of the game is to increase your level, complete as many quests, and redeem as many rewards as possible.<br><br>
-On the more technical side, LifeQuest stores data in the "cloud" via the Firebase API. This means users can create an account and sign in on any device to play the game. More features are planned for the future, such as a friend system. LifeQuest is currently available on the Google Play Store for free.
-
+On the more technical side, LifeQuest stores data in the "cloud" via the Firebase API. This means users can create an account and sign in on any device to play the game. More features are planned for the future, such as a friend system. LifeQuest is currently available on the Google Play Store for free.<br><br>
+<img src="images/lifequest-screenshot.png">

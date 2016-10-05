@@ -1,6 +1,6 @@
 Grocery List Android App
 
-images/grocery-list-screenshot.png
+images/grocery-icon.png
 
 Status: Complete
 Languages: Java, XML
@@ -17,3 +17,5 @@ Thus, this app has some features that aren't necessary for a grocery list app, b
 	<li>Google Maps API</li>
 	<li>Web service integration</li>
 </ul>
+<br><br>
+<img src="grocery-list-screenshot.png"
