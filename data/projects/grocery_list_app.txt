@@ -18,4 +18,4 @@ Thus, this app has some features that aren't necessary for a grocery list app, b
 	<li>Web service integration</li>
 </ul>
 <br><br>
-<img src="grocery-list-screenshot.png"
+<img src="grocery-list-tile.png">

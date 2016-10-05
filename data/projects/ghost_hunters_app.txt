@@ -11,4 +11,4 @@ Google Play Link: <a href="https://play.google.com/store/apps/details?id=edu.vir
 
 This game was a project assigned at the University of Virginia in the CS 2110: Software Development Methods class. My partners Michael Berrigan, Brandon Blankenship, Kavita Sthanumurthy, and I used the Scrum agile methodology in order to complete this project in a timely and organized manner. Due to a shorter than usual amount of time to complete the project, this meant fulfilling user stories written by ourselves, maintaining a product backlog, and planning for week-long sprints.<br><br>
 The game is a 2D side-scroller that involves killing ghosts with orbs of light from your flashlight. The more ghosts you kill, the more points you get, and the faster they come at you!<br><br>
-<img src="gh-game-screenshot.png">
+<img src="images/gh-game-screenshot.png">
